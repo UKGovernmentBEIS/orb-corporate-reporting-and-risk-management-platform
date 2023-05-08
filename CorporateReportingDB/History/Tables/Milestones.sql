@@ -1,0 +1,26 @@
+﻿CREATE TABLE [History].[Milestones]
+(
+	[ID] INT NOT NULL,
+	[Title] NVARCHAR(255) NOT NULL,
+	[MilestoneCode] NVARCHAR(255) NULL,
+	[BaselineDate] DATETIME NULL,
+	[ForecastDate] DATETIME NULL,
+	[ActualDate] DATETIME NULL,
+	[MilestoneTypeID] INT NULL,
+	[LeadUserID] INT NULL,
+	[RagOptionID] INT NULL,
+	[WorkStreamID] INT NULL,
+	[KeyWorkAreaID] INT NULL,
+	[EntityStatusID] INT NULL,
+	[EntityStatusDate] DATETIME2(7) NULL,
+	[SysStartTime] DATETIME2(0) NOT NULL,
+	[SysEndTime] DATETIME2(0) NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[PartnerOrganisationID] INT NULL,
+	[ReportingFrequency] TINYINT NULL,
+	[ReportingStartMonth] TINYINT NULL,
+	[ReportingDueDay] TINYINT NULL,
+	[ReportingStartDate] DATETIME2(0) NULL,
+	[StartDate] DATETIME NULL,
+	[Description] NVARCHAR(500) NULL
+) ON [PRIMARY]

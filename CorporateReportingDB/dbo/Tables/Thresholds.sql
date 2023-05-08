@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Thresholds]
+(
+	[ID] INT IDENTITY(1,1) NOT NULL, 
+    [Title] NVARCHAR(255) NOT NULL,
+	[Priority] INT NOT NULL,
+	CONSTRAINT [PK_Thresholds] PRIMARY KEY CLUSTERED ([ID])
+) 
+

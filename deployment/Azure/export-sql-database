@@ -1,0 +1,71 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: export-sql-database
+#
+# This script exports the Corporate Reporting SQL database for the given environment to Blob Storage 
+#
+# The script requires the following environment variables to be set:
+#
+#     env - The environment name
+#     sqlDatabaseName - The name of the Azure SQL instance
+#     sqlInstanceName - The name of the Azure SQL database to export
+#     storageAccountName - The name of the Storage Account where the backup should be stored
+#     sqlBackupContainerName - The name of the Storate Container where the backup should be stored
+#     resourceGroupName - The name of the Resource Group
+#     sqlAdminUsername - The Admin username for the SQL Azure Instance
+#     sqlAdminPassword - The Admin password for the SQL Azure Instance
+######################################################################################################
+
+blobName=$sqlDatabaseName.bacpac
+blobUri="https://$storageAccountName.blob.core.windows.net/$sqlBackupContainerName/$blobName"
+
+echo "Creating Storage Account $storageAccountName..."
+
+if az storage account show --name $storageAccountName --resource-group $resourceGroupName
+then
+    echo "Storage account already exists - no action required"
+else
+    # Create a storage account
+    az storage account create --name $storageAccountName --resource-group $resourceGroupName --kind Storage --sku Standard_LRS --default-action Allow
+fi
+
+echo "Creating Storage Container $sqlBackupContainerName..."
+
+if az storage container show --name $sqlBackupContainerName --account-name $storageAccountName
+then
+    echo "Storage container already exists - no action required"
+else
+    # Create storage container
+    az storage container create --name $sqlBackupContainerName --account-name $storageAccountName --auth-mode key --public-access off
+fi
+
+echo "Creating Blob SAS token..."
+
+# Obtain a Shared Access Signature token as described at https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-export
+end=`date -d "30 minutes" '+%Y-%m-%dT%H:%MZ'`
+sasToken=$(az storage blob generate-sas --account-name $storageAccountName --container $sqlBackupContainerName --name $blobName --permissions rwd --expiry $end --https-only --output tsv)
+
+echo "Deleting Blob $blobName if it already exists..."
+
+if [[ $(az storage blob exists --container-name $sqlBackupContainerName --name $blobName --account-name $storageAccountName --sas-token $sasToken --query exists) = 'true' ]]
+then
+    # Delete Blob
+    az storage blob delete --container-name $sqlBackupContainerName --name $blobName --account-name $storageAccountName --sas-token $sasToken
+else
+    echo 'Blob does not exist - no action required'
+fi
+
+echo "Exporting SQL database $sqlInstanceName..."
+
+az sql db export --name $sqlDatabaseName --server $sqlInstanceName --resource-group $resourceGroupName --admin-user $sqlAdminUsername --admin-password $sqlAdminPassword --auth-type SQL --storage-key "?$sasToken" --storage-key-type SharedAccessKey --storage-uri $blobUri
+
+echo "Creating Blob SAS token to use when importing the database..."
+
+end=`date -d "30 minutes" '+%Y-%m-%dT%H:%MZ'`
+sasToken=$(az storage blob generate-sas --account-name $storageAccountName --container $sqlBackupContainerName --name $blobName --permissions r --expiry $end --https-only --output tsv)
+
+echo "##vso[task.setvariable variable=blobUri;isSecret=false;isOutput=true]$blobUri"
+echo "##vso[task.setvariable variable=sasToken;isSecret=false;isOutput=true]?$sasToken"
+
+echo "Complete."

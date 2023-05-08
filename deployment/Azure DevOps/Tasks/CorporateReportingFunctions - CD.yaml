@@ -1,0 +1,8 @@
+steps:
+- task: AzureFunctionApp@1
+  displayName: 'Azure Function App Deploy: corporatereportingreminderstest'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (3e78a638-67d3-4bf6-9aed-6e4960e5e620)'
+    appType: functionApp
+    appName: corporatereportingreminderstest
+    package: '$(System.DefaultWorkingDirectory)/Drop/drop'

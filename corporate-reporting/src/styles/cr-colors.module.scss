@@ -1,0 +1,27 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+
+@mixin bgColorThemeLight {
+  background-color: "[theme: themeLight, default: " + $ms-color-themeLight + "]";
+}
+
+$color-primary: "[theme: themePrimary, default: " + $ms-color-themePrimary + "]";
+$color-secondary: "[theme: themeSecondary, default: " + $ms-color-themeSecondary + "]";
+$color-neutralDark: "[theme: neutralDark, default: " + $ms-color-neutralDark + "]";
+$color-neutralLight: "[theme: neutralLight, default: " + $ms-color-neutralLight + "]";
+$color-neutralLighter: "[theme: neutralLighter, default: " + $ms-color-neutralLighter + "]";
+
+$color-white: "[theme: white, default: " + $ms-color-white + "]";
+$color-black: "[theme: black, default: " + $ms-color-black + "]";
+
+// Use theme colours and guess the contrasting colour for font color
+$theme-colors: (
+  "Primary" $color-primary $color-white,
+  "Secondary" $color-secondary $color-white,
+  "NeutralDark" $color-neutralDark $color-white,
+  "NeutralLight" $color-neutralLight $color-black,
+  "NeutralLighter" $color-neutralLighter $color-black
+);
+
+.bgColorNeutralLight {
+  background-color: $color-neutralLight;
+}

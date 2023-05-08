@@ -1,0 +1,24 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: import-sql-database
+#
+# This script imports the Corporate Reporting SQL database for the given environment from Blob Storage 
+#
+# The script requires the following environment variables to be set:
+#
+#     env - The environment name
+#     sqlAdminUsername - The Admin username for the SQL Azure Instance
+#     sqlAdminPassword - The Admin password for the SQL Azure Instance
+#     storageUri - The Uri for the Blob containing the database backup to import
+#     storageKey - The key to access the Storage Account
+######################################################################################################
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+echo "Importing SQL database $sqlDatabaseName from $storageUri..."
+
+az sql db import --admin-user $sqlAdminUsername --admin-password $sqlAdminPassword --auth-type SQL --storage-key $storageKey --storage-key-type SharedAccessKey --storage-uri $storageUri --server $sqlInstanceName --name $sqlDatabaseName --resource-group $resourceGroupName
+
+echo "Complete."

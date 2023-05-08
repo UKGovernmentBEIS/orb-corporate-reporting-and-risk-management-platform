@@ -1,0 +1,21 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+@import '../styles/cr.module';
+
+.saveIndicator {
+    align-items: flex-start;
+    display: inline-block;
+    margin: 0.67em 0.67em 0.67em 0;
+    height: 30px;
+
+    .flexContainer {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        
+        .saveIcon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+    }
+}

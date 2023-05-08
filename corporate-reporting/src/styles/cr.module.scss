@@ -1,0 +1,342 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+@import "./cr-animations.module.scss";
+@import "./cr-badge.module.scss";
+@import "./cr-fonts.module.scss";
+@import "./cr-grid.module.scss";
+@import "./cr-colors.module.scss";
+
+@mixin cr-border-invalid {
+  border: 1px solid #a80000;
+}
+
+.crFullPage {
+  height: 100%;
+}
+
+.cr {
+  .crFullPageList {
+    height: calc(100% - 94px);
+    overflow: auto;
+  }
+
+  .crFullPagePivot {
+    padding: 10px;
+  }
+
+  @media only screen {
+    .crFullPagePivotContent {
+      height: calc(100% - 84px);
+      overflow: auto;
+      padding: 10px;
+    }
+
+    .crFullPageContent {
+      height: calc(100% - 20px);
+      overflow: auto;
+      padding: 10px;
+    }
+
+    .crFullPageContentWithCommandBar {
+      height: calc(100% - 61px);
+      overflow: auto;
+      padding: 10px;
+    }
+  }
+
+  .crList {
+    margin-top: 9px;
+    position: relative;
+  }
+
+  .crCommandBar {
+    min-height: 40px;
+    border-bottom: 1px solid #eaeaea;
+
+    .crCommandBarContainer {
+      display: flex;
+      align-items: center;
+    }
+
+    .crCommandBarPrimaryButton {
+      margin: 0px 8px;
+    }
+  }
+
+  .crCommandBarFloating {
+    border-top: 1px solid #eaeaea;
+  }
+
+  .listTitle {
+    @include fontSize28;
+    font-weight: 100;
+    margin: 6px 10px;
+  }
+
+  .history {
+    margin: 0.3em 0em;
+    opacity: 0.7;
+  }
+
+  .historyFade {
+    opacity: 0.7;
+  }
+
+  .reviewListTitle {
+    @include fontSize18;
+    font-weight: 600;
+    margin: 6px 0px;
+  }
+
+  .reviewList {
+    margin: 6px 0px 12px 0px;
+
+    .reviewListRow {
+      @include bgColorThemeLight;
+    }
+
+    .reviewListRowDivider {
+      padding-left: 9px;
+      font-weight: bold;
+
+      &.reviewListRowDividerGray {
+        background-color: lightgray;
+      }
+    }
+  }
+
+  .riskRegisterRiskForm {
+    @include slideDownIn20;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+  }
+
+  .panelHeaderText {
+    margin-top: 30px;
+    margin-bottom: 14px;
+  }
+
+  .formWarning {
+    margin: 10px 0px;
+  }
+
+  .formLabelNoWrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .formText {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0em;
+  }
+
+  .formSectionHeading {
+    @include fontSize16;
+    line-height: 40px;
+  }
+
+  .formField {
+    margin-bottom: 20px;
+  }
+
+  .formSubField {
+    margin-left: 30px;
+  }
+
+  .formButton {
+    margin: 0.67em 0.67em 0.67em 0em;
+  }
+
+  .fieldLabelWrapper {
+    display: inline-flex;
+    align-items: center;
+
+    .fieldLabelIcon {
+      margin-right: 8px;
+    }
+  }
+
+  .textRight {
+    text-align: right;
+  }
+
+  .lastMonth {
+    opacity: 0.7;
+  }
+
+  .updateFormErrors {
+    margin-bottom: 10px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .textFieldInvalid :global .ms-TextField-fieldGroup {
+    @include cr-border-invalid;
+  }
+  .datePickerInvalid :global .ms-TextField-fieldGroup {
+    @include cr-border-invalid;
+  }
+  .dropdownInvalid :global .ms-Dropdown-title {
+    @include cr-border-invalid;
+  }
+  .userPickerInvalid :global .ms-BasePicker-text {
+    @include cr-border-invalid;
+  }
+
+  .msIcon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    margin: 15px;
+  }
+
+  .commandBarDropdown {
+    margin: 4px;
+    background-color: white;
+  }
+
+  .progressUpdateList {
+    @include slideDownIn20;
+  }
+
+  .progressUpdateFormContent {
+    @include slideDownIn20;
+  }
+
+  .listFilterBox {
+    margin: 4px;
+    background-color: white;
+  }
+
+  .inlineIconContainer {
+    display: inline-block;
+    vertical-align: middle;
+
+    .inlineIcon {
+      line-height: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .updateList {
+    margin-bottom: 9px;
+  }
+
+  .updateList > :only-child {
+    display: block;
+  }
+
+  .updateSectionHeader {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .updateSectionHeaderTitle {
+      @include fontSize20;
+      font-weight: 100;
+    }
+  }
+
+  .updateHeader {
+    margin: 0px 0px 1px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include bgColorThemeLight;
+
+    .updateHeaderContent {
+      width: calc(100% - 50px);
+    }
+
+    .rowColumns {
+      display: flex;
+
+      .column {
+        display: flex;
+        align-items: center;
+        .flexWidthFix {
+          min-width: 0;
+        }
+        .subTitle {
+          @include fontSize14;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .columnRightAlign {
+        justify-content: flex-end;
+
+        .updateHeaderMetadata {
+          margin-left: 16px;
+        }
+      }
+    }
+    .updateHeaderTitle {
+      @include fontSize18;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .rag {
+      width: 100%;
+      padding: 10px 0px;
+    }
+  }
+
+  .signOffGridRow {
+    margin-bottom: 16px;
+    .content {
+      @include bgColorThemeLight;
+      border: 1px solid lightgray;
+      padding: 0px 5px;
+    }
+  }
+
+  .homeMenuTabs,
+  .homeMenuDropdown {
+    display: none;
+  }
+
+  .marginTop12 {
+    margin-top: 12px;
+  }
+
+  @media screen and (max-width: 640px) {
+    .homeMenuDropdown {
+      display: block;
+    }
+
+    .signOffGridRow {
+      .content {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    .homeMenuTabs {
+      display: block;
+    }
+
+    .signOffGridRow {
+      display: flex;
+      .content {
+        min-height: 150px;
+        height: 100%;
+      }
+    }
+  }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,805 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/03/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.9.1905.3, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-1EB06FF228464EC789AE4EF09588A918">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-1EB06FF228464EC789AE4EF09588A918" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Welcome.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='fc74efbc-5a24-491d-be49-dad804778405'&amp;hash=636948279316421707" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="false" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="2" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="false" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="Search Everywhere" Url="/Search" IsExternal="true" />
+            <pnp:NavigationNode Title="Home" Url="{site}/SitePages/Welcome.aspx" IsExternal="false" />
+            <pnp:NavigationNode Title="Reporting Admin" Url="{site}/SitePages/ReportingData-KeyWorkAreas.aspx" IsExternal="false">
+              <pnp:NavigationNode Title="Groups" Url="{site}/SitePages/ReportingData-Groups.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Directorates" Url="{site}/SitePages/ReportingData-Directorates.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Projects" Url="{site}/SitePages/ReportingData-Projects.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Partner organisations" Url="{site}/SitePages/ReportingData-PartnerOrgs.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Partner organisation risks" Url="{site}/SitePages/ReportingData-PartnerOrganisationsRisks.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Partner organisation risk mitigating actions" Url="{site}/SitePages/ReportingData-PartnerOrganisationsRiskMitigationActions.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Key work areas" Url="{site}/SitePages/ReportingData-KeyWorkAreas.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Work streams" Url="{site}/SitePages/ReportingData-WorkStreams.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Metrics" Url="{site}/SitePages/ReportingData-Metrics.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Milestones" Url="{site}/SitePages/ReportingData-Milestones.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Benefits" Url="{site}/SitePages/ReportingData-Benefits.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Commitments" Url="{site}/SitePages/ReportingData-Commitments.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Dependencies" Url="{site}/SitePages/ReportingData-Dependencies.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Risks" Url="{site}/SitePages/ReportingData-Risks.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Risk mitigation actions " Url="{site}/SitePages/ReportingData-RiskMitigationActions.aspx" IsExternal="false" />
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Service Admin" Url="{site}/SitePages/Administration-Users.aspx" IsExternal="false">
+              <pnp:NavigationNode Title="Users" Url="{site}/SitePages/Administration-Users.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="User groups" Url="{site}/SitePages/Administration-UserGroups.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="User directorates" Url="{site}/SitePages/Administration-UserDirectorates.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="User partner orgs" Url="{site}/SitePages/Administration-UserPartnerOrgs.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="User projects" Url="{site}/SitePages/Administration-UserProjects.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Milestone types" Url="{site}/SitePages/Administration-MilestoneTypes.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Benefit types" Url="{site}/SitePages/Administration-BenefitTypes.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Attributes" Url="{site}/SitePages/Administration-Attributes.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Project attributes" Url="{site}/SitePages/Administration-ProjectAttributes.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Risk types" Url="{site}/SitePages/Administration-RiskTypes.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Thresholds" Url="{site}/SitePages/Administration-Thresholds.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Threshold appetites" Url="{site}/SitePages/Administration-ThresholdAppetites.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Units" Url="{site}/SitePages/Administration-Units.aspx" IsExternal="false" />
+              <pnp:NavigationNode Title="Administrators" Url="{site}/SitePages/Administration-Administrators.aspx" IsExternal="false" />
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Risk Archive" Url="{site}/SitePages/RiskArchive.aspx" IsExternal="false" />
+            <pnp:NavigationNode Title="Help" Url="{site}/SitePages/Corporate-Reporting-Help.aspx" IsExternal="false" />
+            <pnp:NavigationNode Title="Feedback" Url="{site}/Lists/Feedback/AllItems.aspx" IsExternal="false" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+      <pnp:Lists>
+        <pnp:ListInstance Title="Corporate Reporting Help Document Library" Description="" DocumentTemplate="{site}/Corporate Reporting Help Document Library/Forms/template.dotx" TemplateType="101" Url="Corporate Reporting Help Document Library" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Corporate Reporting Help Document Library/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Corporate Reporting Help Document Library/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Corporate Reporting Help Document Library/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{6E5C0467-0668-4C73-82A4-FE62FB3BDF3F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Corporate Reporting Help Document Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://0-ukwest1.pushp.svc.ms/notifications?token=w0-c95a1c6f-d4aa-4de7-b2aa-cad98ca81db0" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Feedback" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Feedback" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Feedback/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Feedback/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Feedback/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{5A4F4C3B-852B-4773-A19A-21A415515E4A}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Feedback/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Date" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Date" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Outcome" />
+                <FieldRef Name="Attachments" />
+                <FieldRef Name="Author" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="Date" Title="Date" Type="DateTime" ID="{e4374fce-f24e-4042-8f8a-170b7e90cb7a}" SourceID="{{listid:Feedback}}" StaticName="Date" ColName="datetime1" RowOrdinal="0" CustomFormatter="" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" CalType="0" Version="1" />
+            <Field ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Type="Text" Name="Title" StaticName="Title" DisplayName="Feedback" Required="TRUE" />
+            <Field AppendOnly="FALSE" Description="Please leave blank. The corporate reporting team will provide an update on the action taken as a result of your feedback." DisplayName="Outcome" Format="Dropdown" IsolateStyles="FALSE" Name="Outcome" NumLines="6" RichText="FALSE" RichTextMode="Compatible" Title="Outcome" Type="Note" ID="{c08d368a-9732-4a26-b2db-ff1ef323abc2}" SourceID="{{listid:Feedback}}" StaticName="Outcome" ColName="ntext2" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://2-ukwest1.pushp.svc.ms/notifications?token=w1-b6d43b9f-7fbb-4aab-8856-fd98545b026d" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="true" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x010108" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010901" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{618C92AD-4D97-456A-9A43-F441907FCBB8}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Author" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="Modified" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{B5EE34A6-701C-4D10-AE04-38430540F94A}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="3" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Author" />
+                    <Value Type="Integer">
+                      <UserID />
+                    </Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{35F8CE21-79D5-4811-A231-02793490D304}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="5" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Editor" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{ED515782-059B-4E44-BED9-4A9A33BAA24C}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="2" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{17ACDFE4-0A5D-4DB4-823F-BE62A88FEF71}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c33527b4-d920-4587-b791-45024d00068a" Name="WikiField" DisplayName="Wiki Content" />
+            <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" DisplayName="Authoring Canvas Content" />
+            <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" DisplayName="Banner Image URL" />
+            <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" DisplayName="Description" />
+            <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" DisplayName="Promoted State" />
+            <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" DisplayName="First Published Date" />
+            <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" DisplayName="Page Layout Content" />
+            <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" DisplayName="Author Byline" />
+            <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" DisplayName="Topic header" />
+            <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" DisplayName="Site Page Flags" />
+            <pnp:FieldRef ID="0e7b982f-698a-4d0c-aacb-f16906f66d30" Name="_OriginalSourceUrl" DisplayName="Original Source Url" />
+            <pnp:FieldRef ID="36193413-dd5c-4096-8c1e-1b40098b9ba3" Name="_OriginalSourceSiteId" DisplayName="Original Source Site ID" />
+            <pnp:FieldRef ID="3477a5bc-c605-4b2e-a7c1-8db8f13c017e" Name="_OriginalSourceWebId" DisplayName="Original Source Web ID" />
+            <pnp:FieldRef ID="139da674-dbf6-439f-98e0-4eb05fa9a669" Name="_OriginalSourceListId" DisplayName="Original Source List ID" />
+            <pnp:FieldRef ID="91e86a43-75f2-426f-80da-35edfb47d55d" Name="_OriginalSourceItemId" DisplayName="Original Source Item ID" />
+          </pnp:FieldRefs>
+          <pnp:Folders>
+            <pnp:Folder Name="admin" />
+          </pnp:Folders>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://3-ukwest1.pushp.svc.ms/notifications?token=w0-3a9b25f3-ef7e-469c-bfd2-82be1d9406c4" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+      <pnp:ClientSidePages>
+        <pnp:ClientSidePage PageName="WelcomeOLD.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="About Us" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;4671e4b1-eadb-4772-bf5a-03165981d93b&quot;, &quot;instanceId&quot;: &quot;5fb39242-7f79-467e-bc2c-a1311895db0c&quot;, &quot;title&quot;: &quot;My Progress Updates&quot;, &quot;description&quot;: &quot;A web part for users to view and enter progress updates&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;My Progress Updates web part&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="4671e4b1-eadb-4772-bf5a-03165981d93b" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="SystemAdmin.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Corporate Reporting System Admin" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingItems.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Reporting Admin" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Corporate-Reporting-Help.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Title="Corporate Reporting Help">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="TwoColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="531345ff-b0fd-40b6-8cca-87e36bf958d6" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="Please see below for all corporate reporting help. Alternatively, click here to view &lt;a data-interception=&quot;off&quot; href=&quot;{site}/Corporate%20Reporting%20Help%20Document%20Library/Forms/Working.aspx?id={site}/Corporate%20Reporting%20Help%20Document%20Library/Corporate%20Reporting%20Help%20Guide.pdf&amp;amp;parent={site}/Corporate%20Reporting%20Help%20Document%20Library&quot; target=&quot;_blank&quot;&gt;as a PDF.&lt;/a&gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+                <pnp:CanvasControl WebPartType="DocumentEmbed" JsonControlData="{&quot;id&quot;: &quot;b7dd04e1-19ce-4b24-9132-b60a1c2b910d&quot;, &quot;instanceId&quot;: &quot;cd91d523-fb3e-46e8-87cf-8b497579a207&quot;, &quot;title&quot;: &quot;File viewer&quot;, &quot;description&quot;: &quot;Display a document or other file on your page. You can show a file from most applications including Word, Excel, PowerPoint, Visio, PDF, 3D, and others&quot;, &quot;dataVersion&quot;: &quot;1.4&quot;, &quot;properties&quot;: {&quot;authorName&quot;:&quot;May-Parrott, Ben (BEIS)&quot;,&quot;chartitem&quot;:&quot;&quot;,&quot;endrange&quot;:&quot;&quot;,&quot;excelSettingsType&quot;:&quot;&quot;,&quot;file&quot;:&quot;{site}/Corporate%20Reporting%20Help%20Document%20Library/Corporate%20Reporting%20Help%20Guide.pdf&quot;,&quot;listId&quot;:&quot;{listid:Corporate Reporting Help Document Library}&quot;,&quot;modifiedAt&quot;:&quot;2018-10-26T19:58:15+01:00&quot;,&quot;photoUrl&quot;:&quot;/_layouts/15/userphoto.aspx?size=S&amp;accountname=Ben.May-Parrott%40beis.gov.uk&quot;,&quot;rangeitem&quot;:&quot;&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;startPage&quot;:1,&quot;startrange&quot;:&quot;&quot;,&quot;tableitem&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;ecf94b10-a550-4985-afa5-83af7c3aad4c&quot;,&quot;wdallowinteractivity&quot;:true,&quot;wdhidegridlines&quot;:true,&quot;wdhideheaders&quot;:true,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;webAbsoluteUrl&quot;:&quot;{hosturl}{site}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;annotation&quot;:&quot;&quot;,&quot;title&quot;:&quot;Corporate Reporting Help Guide.pdf&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;serverRelativeUrl&quot;:&quot;{site}/Corporate%20Reporting%20Help%20Document%20Library/Corporate%20Reporting%20Help%20Guide.pdf&quot;,&quot;wopiurl&quot;:&quot;{site}/_layouts/15/WopiFrame.aspx?sourcedoc=%7becf94b10-a550-4985-afa5-83af7c3aad4c%7d&amp;action=interactivepreview&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="b7dd04e1-19ce-4b24-9132-b60a1c2b910d" Order="2" Column="1" />
+                <pnp:CanvasControl WebPartType="Text" ControlId="cb1bc91c-c714-4d0b-9f9a-f24a22a298dc" Order="1" Column="2">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="Please see below for online risk reporting guidance. Alternatively, click here to view &lt;a data-interception=&quot;on&quot; href=&quot;/:w:/r/{site}/Corporate%20Reporting%20Help%20Document%20Library/Online%20Risk%20Reporting%20Guidance.docx?d=w2643cec6e7d04198971dd21091862ed7&amp;amp;csf=1&amp;amp;e=tLOFjI&quot;&gt;as a word document&lt;/a&gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+                <pnp:CanvasControl WebPartType="ContentEmbed" JsonControlData="{&quot;id&quot;: &quot;490d7c76-1824-45b2-9de3-676421c997fa&quot;, &quot;instanceId&quot;: &quot;8da3f1fc-acd8-4ca9-ada9-210f24e7f2f9&quot;, &quot;title&quot;: &quot;Embed&quot;, &quot;description&quot;: &quot;Embed content from other sites such as Sway, YouTube, Vimeo, and more&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;embedCode&quot;:&quot;{hosturl}/:w:/r{site}/Corporate%20Reporting%20Help%20Document%20Library/Online%20Risk%20Reporting%20Guidance.docx?d=w2643cec6e7d04198971dd21091862ed7&amp;csf=1&amp;e=tLOFjI&quot;,&quot;cachedEmbedCode&quot;:&quot;&lt;iframe width=\&quot;100%\&quot; height=\&quot;70%\&quot; src=\&quot;{hosturl}{site}/_layouts/15/Doc.aspx?sourcedoc={2643cec6-e7d0-4198-971d-d21091862ed7}&amp;action=interactivepreview\&quot; allowfullscreen=\&quot;\&quot;&gt;&lt;/iframe&gt;&quot;,&quot;shouldScaleWidth&quot;:false,&quot;tempState&quot;:{},&quot;cachedEmbedCodeThumbnail&quot;:&quot;{hosturl}/sites/beis/_layouts/15/getpreview.ashx?guidFile=2643cec6%2De7d0%2D4198%2D971d%2Dd21091862ed7&amp;guidWeb={siteidencoded}&amp;guidSite={sitecollectionidencoded}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;captionText&quot;:&quot;&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="490d7c76-1824-45b2-9de3-676421c997fa" Order="2" Column="2" />
+              </pnp:Controls>
+            </pnp:Section>
+            <pnp:Section Order="2" Type="OneColumn" />
+          </pnp:Sections>
+          <pnp:Header Type="Default" ServerRelativeImageUrl="" LayoutType="NoImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Registering-with-and-accessing-the-system.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Title="Registering with and accessing the system">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="353a73f9-5571-4890-aa41-9117b2e50df8" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&amp;lt;p&amp;gt; &amp;lt;strong&amp;gt; BEIS Online Reporting – Registering with and accessing the system &amp;lt;/strong&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;h1&amp;gt; Registering to the system &amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt; Getting access is simple and takes just a few steps: &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 1) Click &amp;lt;a href=&quot;https://corporatereportingapiprod.azurewebsites.net/&quot;&amp;gt; https://corporatereportingapiprod.azurewebsites.net/ &amp;lt;/a&amp;gt; ; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 2) If asked, confirm your profile by clicking on your name. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 3) &amp;lt;/p&amp;gt; &amp;lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; &amp;lt;div&amp;gt; &amp;lt;p&amp;gt; user.name@beis.gov.uk &amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;p&amp;gt; Grant permission for BEIS Digital Dev to sign you in and to recognise your profile by clicking accept. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; This allows the database to recognise who you are, ensuring that it only brings back the content you need to see. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 4) &amp;lt;/p&amp;gt; &amp;lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; &amp;lt;div&amp;gt; &amp;lt;p&amp;gt; user.name@beis.gov.uk &amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;p&amp;gt; Grant permission for Corporate Reporting to sign you in and to recognise your profile by clicking accept. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; This associates your SharePoint identity to the reporting system, which means you will not have to register/sign in again. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 5) Close the resulting browser page - do not click “sign out”. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; And that completes the registration. The reporting database will now recognise who you are and will present you with only the reporting information that you need to update. &amp;lt;/p&amp;gt; &amp;lt;h1&amp;gt; Accessing the system &amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt; Access is via a weblink so, to make things easier for you in future, it is a good idea to save the page as a bookmark the first time you visit it. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; &amp;lt;strong&amp;gt;Please note&amp;lt;/strong&amp;gt; – on accessing the system you can sometimes see a “Failed to fetch” error message in a pink box. &amp;lt;strong&amp;gt;P&amp;lt;/strong&amp;gt; &amp;lt;strong&amp;gt;ressing refresh will usually resolve the issue&amp;lt;/strong&amp;gt; and your content will load. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; 1) The system can be accessed at: &amp;lt;a href=&quot;https://beisgov.sharepoint.com/sites/beis/470/SitePages/Welcome.aspx&quot; &amp;gt; https://beisgov.sharepoint.com/sites/beis/470/SitePages/Welcome.aspx &amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; The screen you see will then be bespoke to you, depending on which reporting elements you are responsible for. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; &amp;lt;strong&amp;gt; Please refer to the guidance document for your particular role for more information on what you will need to do each month. &amp;lt;/strong&amp;gt; &amp;lt;/p&amp;gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" ServerRelativeImageUrl="" LayoutType="NoImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Help for contributors.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Title="Help for leads and contributors">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn" />
+            <pnp:Section Order="2" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="3a719ff7-ef1d-4bfd-8512-4e3671ba13e6" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help-for-directors.aspx&quot;&gt;Help for directors and SROs&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help-for-local-administrators.aspx&quot;&gt;Help for local administrators&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&#xA;&#xA;&lt;h3&gt;&lt;strong&gt;Access to the system&lt;/strong&gt;&lt;/h3&gt;&#xA;&#xA;&lt;p&gt;You can find the system at&amp;nbsp;&amp;nbsp;&lt;a data-interception=&quot;off&quot; href=&quot;{site}/SitePages/WelcomeOLD.aspx&quot;&gt;https://beisgov.sharepoint.com/sites/beis/470/SitePages/Welcome.aspx&lt;/a&gt;.&lt;br&gt;&#xA;Save this link&amp;nbsp;in your favourites or bookmarks for future use.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;You will then see a screen which only displays&amp;nbsp;reporting elements that are relevant to you.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If the screen is blank, contact your local administrator as they may need to assign you to the correct content.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Word limits&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Like the spreadsheets that online reporting is replacing, many of the main reporting fields:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;have character limits set on them&lt;/li&gt;&#xA;	&lt;li&gt;will reset to empty each month (although the previous month's RAGs and text will show&amp;nbsp;as a reminder)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;These changes are to stop returns becoming unwieldy over time, and to focus the reporting process on the current situation regarding delivery and how we need to respond to that.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Submit&amp;nbsp;progress returns&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;As the system has an imposed deadline of the last day of the month for director or SRO sign-off, if you are unlikely to submit your progress on time to Portfolio Office&amp;nbsp;you should &lt;strong&gt;contact your local administrator&lt;/strong&gt; who will delegate completion to a colleague in your team. The system can give access for&amp;nbsp;up to 4 people.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Depending on your role you may need to provide progress returns and RAG ratings for any or all of:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;Key work areas&lt;/li&gt;&#xA;	&lt;li&gt;Milestones&lt;/li&gt;&#xA;	&lt;li&gt;Metrics or benefits&lt;/li&gt;&#xA;	&lt;li&gt;Project dependencies&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;In all cases the system will display&amp;nbsp;what was entered for the previous month, and the progress fields will have some useful guidance on what sort of information is required.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Check that the current month is selected in the drop-down menu, and that you only update this month.&amp;nbsp;&lt;/strong&gt;The system can display&amp;nbsp;this month and last month, to help PMO and Portfolio Office.&amp;nbsp;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Check that you click 'save' before you move away&lt;/strong&gt; to another screen, or your update will be lost. You can return to edit your update whenever you like, but only your last saved version will be submitted when your director/SRO approves the whole return at the end of the month.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Some of the reporting fields have guidance prompts to help you with the kind of information required, and if you hover over any RAGbutton, screen tips will also appear giving definitions of the various statuses.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Close&amp;nbsp;a report element when complete&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;When a milestone or key work area has been delivered (or it has been agreed hat it should no longer be delivered), you can close the element by checking&amp;nbsp;the tick box which says 'Tick this box to mark this activity as closed. Only do this if delivery is complete and there are no more actions to take'.&amp;nbsp;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;You will need to provide a final RAG and update on the reasons why you have closed the element, and for milestones, the date the element closed.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;When you log in the following month, the element will not appear on your 'my updates' screen.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Track&amp;nbsp;your work&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Once you have started using the system, the home screen will show which items you have updated (a RAG) and which you haven't (a grey box which says 'to be completed').&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Please check that all your returns are submitted &lt;strong&gt;at least a few working days&lt;/strong&gt; before the end of the month as this will give your director or SRO time to complete the approval and submission process.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;View&amp;nbsp;reports&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Full report&lt;/strong&gt;: The 'My updates' screen shows only the elements that you need to edit but it is sometimes useful to see the full report. We have added a 'Draft Reports' page to facilitate this,&amp;nbsp;that all users can see.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Previous months&lt;/strong&gt;: When a report is approved, it is stored in the 'Report Archive'. All previously-approved reports for your Directorate or project are available to view there.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Submitting the directorate or programme/project overview&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Although not many authors will be involved in this activity, you may be asked to:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;provide a first draft of this part of the report for your director or SRO to sign off&lt;/li&gt;&#xA;	&lt;li&gt;provide this information directly if your director or SRO is unavailable&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;To do this:&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Select either the 'Directorate Report' or 'Project Report' from the top navigation menu&lt;/li&gt;&#xA;	&lt;li&gt;If your director or SRO is responsible for several projects, choose the correct directorate, programme or project from the list and check the correct date is selected.&lt;/li&gt;&#xA;	&lt;li&gt;You can then complete the relevant information, making sure you click 'save' at the end of the form.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Contacts and FAQs&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;h4&gt;Who to contact&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;In most cases, &lt;strong&gt;local administrators&lt;/strong&gt; (usually either members of the Director's office or the programme/project PMO) play&amp;nbsp;a vital part in co-ordinating the reporting process - they have been asked to introduce themselves to report authors.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Contact one of our team&amp;nbsp;at &lt;a data-interception=&quot;on&quot; href=&quot;mailto:corporatereporting@beis.gov.uk&quot;&gt;corporatereporting@beis.gov.uk&lt;/a&gt; who can tell you who your &lt;strong&gt;administrators/reporting leads&lt;/strong&gt; are.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;FAQs&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I can't see any content and there is a pink 'Failed to fetch' message.&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Click the 'refresh' icon on your browser's menu bar will usually resolve this issue. If not, contact your local administrator who can check your permissions have been set up properly&amp;nbsp;and you have registered correctly.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;The information I entered is already showing as the previous month and the entry screen still says 'to be completed' even though the month hasn't ended&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;This is probably because your director or SRO has already approved the return. This changes the status of the data to 'submitted' and clears the screens ready for the next month's return.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;You can still view this month's return if you need to amend it&lt;/strong&gt; - select the current month from the dropdown menu above your progress update, and you can edit and re-save it. But to make sure that your new edit is included in the final report a local administrator will have to re-approve the full report.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I can't see a key work area or milestone that I need to update/I need a new one&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Here you will need the report element assigned to you or added by your local administrator.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;The details of the description, baseline dates etc are wrong&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;These can be easily changed in the administration part of the system by your local administrator.&lt;/p&gt;&#xA;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" ServerRelativeImageUrl="" LayoutType="NoImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Help-for-directors.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Title="Help for directors and SROs">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn" />
+            <pnp:Section Order="2" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="3a719ff7-ef1d-4bfd-8512-4e3671ba13e6" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help%20for%20contributors.aspx&quot;&gt;Help for leads and contributors&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help-for-local-administrators.aspx&quot;&gt;Help for local administrators&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;&lt;br&gt;&#xA;&lt;strong&gt;Access to the system&lt;/strong&gt;&lt;/h3&gt;&#xA;&#xA;&lt;p&gt;You can find the system at&amp;nbsp;&amp;nbsp;&lt;a data-interception=&quot;off&quot; href=&quot;{site}/SitePages/WelcomeOLD.aspx&quot; target=&quot;_blank&quot;&gt;https://beisgov.sharepoint.com/sites/beis/470/SitePages/Welcome.aspx&lt;/a&gt;.&lt;br&gt;&#xA;Save this link&amp;nbsp;in your favourites or bookmarks for future use.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If the screen shows a 'failed to fetch' error, press the&amp;nbsp;'refresh' button on your browser menu and the content should load.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Deadline for report submissions&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;The system now operates to a hard deadline on the last day of the month&amp;nbsp;for submissions to Portfolio Office. At midnight on the last day of each month the system resets, with all approved data becoming the return for the month that is ending, and all fields becoming blank ready for the new month's information.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;If the report has not been approved at this point:&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;data will not be pulled through to the PFR/ExCo and Group reports created by Portfolio Office&lt;/li&gt;&#xA;	&lt;li&gt;data will not&amp;nbsp;be visible for your team to see the next month.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;If you will not be available or able to submit your return on or before the last day of the month, you must speak to your &lt;strong&gt;local administrator&lt;/strong&gt; who can reassign access to the approval screen to another member of your team.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Structure of the report&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;The reporting is split into two areas:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;individual report elements like key work areas and milestones (updated by the relevant lead)&lt;/li&gt;&#xA;	&lt;li&gt;the Project Overview (where headline messages and RAGs are provided - this is a separate reporting area which you can delegate to a team member to draft if necessary).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;Either way, should you wish to, any information that has been provided by your team can be amended by the Director/SRO (or their delegated officer) at the review and sign-off stage.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;b&gt;Focus on delivery impact&lt;/b&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Like the spreadsheets that online reporting is replacing, many of the main reporting fields:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;have character limits set on them&lt;/li&gt;&#xA;	&lt;li&gt;will reset to empty each month (although the previous month's RAGs and text will show&amp;nbsp;as a reminder)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;This is&amp;nbsp;to stop returns from growing over time into a complete history of the project and instead to help focus the reporting process on the impact that the current situation is having on delivery and how we need to respond.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Reviewing and amending the report&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;As Director or SRO, you will automatically be given access to the approval screen for the overall report for your directorate or programme/project.&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Make sure that the correct Directorate/Project and the current month are selected in the drop-down menus. The system allows access to this month and the previous one to help the PMO and Portfolio Office, but you should only ever need to approve the current month.&lt;/li&gt;&#xA;	&lt;li&gt;The system builds and displays the return from all your team's entries (this can take a short time to load on first use). The headlines will show where information has been provided (if a deputy has produced a first draft for you) and where it is still required (greyed or blank cells).&lt;/li&gt;&#xA;	&lt;li&gt;Click the pencil icon that appears above the overarching RAG status box to&amp;nbsp;edit any element&amp;nbsp;of the return.&lt;/li&gt;&#xA;	&lt;li&gt;A pop-up screen will appear where&amp;nbsp;you can edit&amp;nbsp;the text.&amp;nbsp;Once you have finished editing you must scroll to the bottom of the screen&amp;nbsp;and click 'save' or your edit will be lost.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Signing off the report&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Once you are happy with the report you can then scroll to the bottom of the review screen to click&amp;nbsp;the approve button.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Please note&lt;/strong&gt; – this&amp;nbsp;button will not appear&amp;nbsp;when you first access the review screen - if you have not edited this screen&amp;nbsp;and are happy with the return it may still be greyed out.&amp;nbsp;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If this happens, the easiest way to activate the button is to change the report month in the drop-down list and then to change back to the current month. This&amp;nbsp;should make the approve&amp;nbsp;button live and turn&amp;nbsp;blue.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;If things aren’t quite right&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;For many of the items below, in the first instance you will need to contact your local administrator.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;These are usually either members of the Director’s office or the programme/project PMO. Local administrators play a key role in co-ordinating the reporting process and have been asked to make themselves known to report authors.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If you don't know&amp;nbsp;who your reporting lead is, contact a member of the &lt;a data-interception=&quot;on&quot; href=&quot;mailto:corporatereporting@beis.gov.uk&quot;&gt;corporate reporting team&lt;/a&gt; in Portfolio Office who will be able to let you know who your administrators are.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;All admin changes happen quickly and are immediately live - refreshing your screen once the administrator has completed the request&amp;nbsp;will show the updated version.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I can't see any content and there is a pink 'Failed to fetch' message&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Pressing the refresh icon at the top-left of the browser screen will usually resolve the issue and your content will load. If this does not work you will need to contact your local administrator to check whether you have been given the correct permissions and whether you have correctly completed the registration process.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I cannot see a reporting element (key work area, milestone, etc.) that I need to&amp;nbsp;update&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In this instance you will need to have the report element assigned to you and you will need to contact your local administrator to do this.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;The details of the report element (the description, baseline dates, etc.) are wrong&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;These can easily be amended in the admin side of the system but it will need to be completed by one of your local administrators.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I need a new reporting element (key work area, milestone, etc.)&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;New report elements can be added by your local administrators.&lt;/p&gt;&#xA;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" ServerRelativeImageUrl="" LayoutType="NoImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Help-for-local-administrators.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Title="Help for local administrators">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn" />
+            <pnp:Section Order="2" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="3a719ff7-ef1d-4bfd-8512-4e3671ba13e6" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help-for-directors.aspx&quot;&gt;Help for directors and SROs&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;a data-interception=&quot;on&quot; href=&quot;{site}/SitePages/Help%20for%20contributors.aspx&quot;&gt;Help for leads and contributors&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&#xA;&#xA;&lt;h3&gt;&lt;strong&gt;Your role as a local administrator&lt;/strong&gt;&lt;/h3&gt;&#xA;&#xA;&lt;p&gt;You will be either:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;managing the system (eg creating new report elements, re-assigning ownership etc)&lt;/li&gt;&#xA;	&lt;li&gt;helping users with issues or problems (eg signposting for error messages etc)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;Where administrators are asked by team members to help input data into reports, see the other Help sections in this guide for Director/SRO and contributor guidance.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Responsibilities of Portfolio Office vs. local administrator&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Access to certain functions will be limited by the administration permission levels you have been given. Some areas are restricted to only the Portfolio Office because of how changes will affect reporting outputs.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Change reporting areas&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;This menu item&amp;nbsp;in the left navigation is where admin users can make changes.&lt;/p&gt;&#xA;&#xA;&lt;div class=&quot;canvasRteResponsiveTable&quot;&gt;&#xA;&lt;div class=&quot;tableLeftAlign tableWrapper&quot;&gt;&#xA;&lt;table class=&quot;borderHeaderTableStyleNeutral&quot; style=&quot;width:1038px;&quot; title=&quot;Table&quot;&gt;&#xA;	&lt;tbody&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;&lt;strong&gt;Portfolio Office can:&lt;/strong&gt;&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;&lt;strong&gt;Local administrator can:&lt;/strong&gt;&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;Create or edit Groups&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;Create or edit Directorates, including assigning directors&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;Create or edit Projects, including assigning SROs&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;&#xA;			&lt;p&gt;Create new and edit existing report elements, including assigning leads and contributors:&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Key Work Areas/workstreams&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Milestones&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Metrics/benefits&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Dependencies&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Commitments&lt;/p&gt;&#xA;			&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;&#xA;			&lt;p&gt;Create new and edit existing report elements, including assigning leads and contributors:&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Key Work Areas/workstreams&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Milestones&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Metrics/benefits&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Dependencies&lt;/p&gt;&#xA;&#xA;			&lt;p&gt;Commitments&lt;/p&gt;&#xA;			&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;		&lt;tr&gt;&#xA;			&lt;td style=&quot;width:488px;&quot;&gt;Re-open incorrectly closed elements&lt;/td&gt;&#xA;			&lt;td style=&quot;width:499px;&quot;&gt;Re-open incorrectly closed elements&lt;/td&gt;&#xA;		&lt;/tr&gt;&#xA;	&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;&lt;br&gt;&#xA;Currently only the Portfolio Office as admin users&amp;nbsp;can:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;&lt;span&gt;create new and edit existing users&lt;/span&gt;&lt;/li&gt;&#xA;	&lt;li&gt;assign users to directorates and projects&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Edit&amp;nbsp;reporting elements&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Although the information required differs for each element, the steps&amp;nbsp;below are&amp;nbsp;the same for key work areas (in directorates), workstreams (in projects), milestones, metrics/benefits, dependencies and commitments.&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Select the report element you want to update&amp;nbsp;– a tick will appear next to its&amp;nbsp;name. Click 'edit'&amp;nbsp;at the top of the page.&lt;/li&gt;&#xA;	&lt;li&gt;On the next screen you can change any of the fields associated to that reporting element.&lt;/li&gt;&#xA;	&lt;li&gt;When you are finished editing you must click 'save' so your changes are not lost.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: for key work areas, milestones&amp;nbsp;etc&amp;nbsp;the edit screen for the report element is also where you assign individual team members to have lead or contributor access, so you can then edit them.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Create a new reporting area&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Full report: The 'My updates' screen shows only the elements that you need to edit but it is sometimes useful to see the full report. We have added a 'Draft Reports' page to facilitate this,&amp;nbsp;that all users can see.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Although the information required will be different for each element, the process identified below is effectively the same for key work areas or workstreams, milestones, metrics or benefits, dependencies and commitments.&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Click '+New' at the top of the page. This will open a screen where you can change&amp;nbsp;any of the fields associated to that reporting element.&amp;nbsp;&lt;br&gt;&#xA;	&lt;strong&gt;Note&lt;/strong&gt;: The red asterisk shows&amp;nbsp;required fields&amp;nbsp;that you need to complete before saving.&lt;/li&gt;&#xA;	&lt;li&gt;When you are finished editing you must click 'save' so your changes are not lost.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h4&gt;&lt;strong&gt;Assign users to reporting elements&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;Reporting elements and updates can be accessed and edited by&amp;nbsp;one&amp;nbsp;lead and up to three contributors. Users are assigned to specific elements by editing the properties of the element itself, not by editing the user’s profile.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Admin users and the Director/SRO have the rights to edit everything in the return, so they do not need to be added as leads or contributors.&lt;/p&gt;&#xA;&#xA;&lt;h4&gt;&lt;br&gt;&#xA;&lt;strong&gt;Resolving common issues&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I can't see any content and there is a pink box with an error message&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Refresh your screen - this will usually resolve things&amp;nbsp;and the content will load.&lt;/li&gt;&#xA;	&lt;li&gt;If it doesn't,&amp;nbsp;check whether the user has the correct permissions to view the specific content:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;ul&gt;&#xA;	&lt;li style=&quot;margin-left:80px;&quot;&gt;Are they an admin user for your area?&lt;/li&gt;&#xA;	&lt;li style=&quot;margin-left:80px;&quot;&gt;Do they appear as a lead or contributor on the relevant reporting element?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;If you can&amp;nbsp;answer 'no' to both questions, you'll need to give&amp;nbsp;them access to the relevant item. See 'Assign&amp;nbsp;users to reporting elements'&amp;nbsp;above.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If you can answer 'yes' to 1&amp;nbsp;or&amp;nbsp;2&amp;nbsp;and they still can't see the content, please contact &lt;a data-interception=&quot;on&quot; href=&quot;mailto:corporatereporting@beis.gov.uk&quot;&gt;corporatereporting@beis.gov.uk&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;The information I entered is already showing as the previous month and the entry screen again says 'to be completed'&amp;nbsp;even though the month has not yet ended.&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The most likely reason for this is because your Director/SRO has already approved the return. This changes&amp;nbsp;the status of the data to&amp;nbsp;'submitted'&amp;nbsp;and clears the screens ready for the next month’s return.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If the user is looking for this month’s return because they need to amend it, this can still be achieved.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If they select the correct month from the drop-down menu above their progress update they can then edit and re-save it. However, to make sure that that the edit is then picked up in the final report you will need to have the full report re-approved.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The process for this will need to be agreed locally and can be made either by the Director/SRO if the change is felt to be significant, or the admin user can temporarily assign themselves as a Director/SRO.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I cannot see a specific reporting element (key work area, milestone, etc.) for which I need to provide an update&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;It is likely that the user has not been assigned as a lead or contributor and you will need to add their name whilst&amp;nbsp;having&amp;nbsp;the appropriate report element open.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See 'Assign&amp;nbsp;users to reporting&amp;nbsp; elements'&amp;nbsp;above.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;It may alternatively be that the specific reporting element has been closed incorrectly. This can be amended in the admin side of the system.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See 'Edit reporting elements'&amp;nbsp;above.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;The details of the report element (the description, baseline dates, etc.) are wrong&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;These can be changed&amp;nbsp;in the admin side of the system. See 'Edit reporting elements'&amp;nbsp;above.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;I need a new reporting element (key work area, milestone, etc)&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;These can be added in the admin side of the system. See 'Create new report elements'&amp;nbsp;above.&lt;/p&gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+              </pnp:Controls>
+            </pnp:Section>
+            <pnp:Section Order="3" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="97a09b13-44df-4e3c-b1b1-e52858747b5e" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="&lt;h4&gt;&lt;strong&gt;Finding what you're looking for&lt;/strong&gt;&lt;/h4&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Filtering lists on admin screens&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;All the admin screens have a 'live' (predictive) search box at the top right that will look across every element of the system as you type.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Searching within&amp;nbsp;a page&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The 'Find on page'&amp;nbsp;function in your browser is a useful way to locate updates, on what can be very busy screens with lots of information.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;You can find this either by clicking 'CTRL' + 'F' on your keyboard, or clicking the three vertical dots at the far right of the menu bar, then scrolling down to 'Find'.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Your search term will be highlighted wherever it appears on the screen&amp;nbsp;and, if it appears more than once, you can scroll through the results using the up and down arrows, with the current result being shown in orange and other results in yellow.&lt;/p&gt;" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" ServerRelativeImageUrl="" LayoutType="NoImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="PowerBI.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="false" Layout="Home" EnableComments="false" Title="About Us" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="PowerBIReportEmbed" JsonControlData="{&quot;id&quot;: &quot;58fcd18b-e1af-4b0a-b23b-422c2c52d5a2&quot;, &quot;instanceId&quot;: &quot;9a319850-9a1c-429e-b836-7940367486d7&quot;, &quot;title&quot;: &quot;Power BI&quot;, &quot;description&quot;: &quot;Display a Power BI report&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;sanitizedReportEmbedCode&quot;:&quot;https://app.powerbi.com/reportEmbed?reportId=78ac1727-01ac-4a4d-957c-8da55ab2fcfa&amp;groupId=me&quot;,&quot;showFilterPane&quot;:true,&quot;showNavPane&quot;:true,&quot;embedFrameAspectRatio&quot;:0,&quot;pageName&quot;:&quot;ReportSection2eca4bb2480bbc5a0ed7&quot;,&quot;pageNames&quot;:[&quot;ReportSection2eca4bb2480bbc5a0ed7&quot;,&quot;ReportSection&quot;,&quot;ReportSection3cf042525cec9b4bbbd6&quot;],&quot;pageDisplayNames&quot;:[&quot;Group&quot;,&quot;Directorate&quot;,&quot;Project&quot;],&quot;currentReportEmbedCode&quot;:&quot;https://app.powerbi.com/groups/me/reports/78ac1727-01ac-4a4d-957c-8da55ab2fcfa/&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="58fcd18b-e1af-4b0a-b23b-422c2c52d5a2" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Groups.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Groups" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:0}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Directorates.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Directorates" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Projects.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Projects" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:2}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrgs.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Partner organisations" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:3}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-KeyWorkAreas.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Key work areas" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-WorkStreams.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Work streams" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:5}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Metrics.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Metrics" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:6}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Milestones.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Milestones" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:7}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Benefits.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Benefits" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:8}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Commitments.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Commitments" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:9}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Dependencies.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Dependencies" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:10}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Risks.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Risks" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:11}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-RiskMitigationActions.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Risk mitigation actions" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:12}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-Users.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Users" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:0}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-UserGroups.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="User groups" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-UserDirectorates.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="User directorates" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:2}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-UserPartnerOrgs.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="User partner organisations" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:3}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-UserProjects.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="User projects" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-MilestoneTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Milestone types" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:5}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-BenefitTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Benefit types" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:6}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-Attributes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Attributes" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:7}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-ProjectAttributes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Project attributes" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:8}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-RiskTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Risk types" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:9}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-Thresholds.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Users">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;CR - System Administration&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:12}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-ThresholdAppetites.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Users">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;CR - System Administration&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:13}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-Units.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Measurement units" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:10}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="admin/Administration-Administrators.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Administrators" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;38d279ea-c346-42b4-9f51-d7a346866de9&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:11}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Welcome.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;4671e4b1-eadb-4772-bf5a-03165981d93b&quot;, &quot;instanceId&quot;: &quot;009eac95-9836-42bc-9605-a81f5d8c519f&quot;, &quot;title&quot;: &quot;CR - My Progress Updates&quot;, &quot;description&quot;: &quot;A web part for users to view and enter progress updates&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;My Progress Updates web part&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="4671e4b1-eadb-4772-bf5a-03165981d93b" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrganisationsRisks.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Risks" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:13}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrganisationsRiskMitigationActions.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Risks" ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800C8760B7EA035B44790473E038068140E">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;ad6bca4a-8cd4-4074-8ac2-0b95ee8c572f&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;entity&quot;:14}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+      </pnp:ClientSidePages>
+      <pnp:Header Layout="Standard" />
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dg-dashboard-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dgDashboard/DgDashboardWebPart.js",
+          "manifest": "./src/webparts/dgDashboard/DgDashboardWebPart.manifest.json"
+        }
+      ]
+    },
+    "api-explorer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/apiExplorer/ApiExplorerWebPart.js",
+          "manifest": "./src/webparts/apiExplorer/ApiExplorerWebPart.manifest.json"
+        }
+      ]
+    },
+    "orb-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/orb/OrbWebPart.js",
+          "manifest": "./src/webparts/orb/OrbWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {}
+}

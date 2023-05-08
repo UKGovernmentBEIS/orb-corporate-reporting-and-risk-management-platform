@@ -1,0 +1,10 @@
+{
+    "Location": "uksouth",
+    "Name": "beisgov-PipeLines",
+    "CertificateName": "ServicePrincipalCertificate",
+    "AzureSubscription": "BEIS Live Subscription",
+    "SharePointTenant": "beisgov.onmicrosoft.com",
+    "SharePointTenantId": "cbac7005-02c1-43eb-b497-e6492d1b2dd8",
+    "SharePoint" : "beisgov.sharepoint.com",
+    "DevOpsSpn" : "2d786bb7-27c6-4f59-9e3c-993c4a037ce6"
+}

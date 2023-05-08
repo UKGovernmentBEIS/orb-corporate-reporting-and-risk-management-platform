@@ -1,0 +1,55 @@
+{
+    "rootDir": "../src",
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js"
+    ],
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "transformIgnorePatterns": [],
+    "testMatch": [
+        "**/src/**/*.test.+(ts|tsx|js)"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+        "json",
+        "lcov",
+        "text",
+        "cobertura"
+    ],
+    "coverageDirectory": "../jest",
+    "moduleNameMapper": {
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+        "office-ui-fabric-react/lib/(.*)$": "office-ui-fabric-react/lib-commonjs/$1"
+    },
+    "reporters": [
+        "default",
+        [
+            "jest-junit",
+            {
+                "suiteName": "jest tests",
+                "outputDirectory": "temp/test/junit",
+                "outputName": "junit.xml"
+            }
+        ]
+    ],
+    "coverageThreshold": {
+        "global": {
+            "branches": 1,
+            "functions": 1,
+            "lines": 1,
+            "statements": 1
+        }
+    },
+    "globals": {
+        "ts-jest": {
+            "diagnostics": {
+                "ignoreCodes": [
+                    151001
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: set-resource-names
+#
+# This script defines the names of the Azure resources that will be created by the provisionsing process.
+# It is called by the provisioning scripts so that a common set of resource names is used.
+#
+# Parameters:
+#
+#     1) The environment name
+######################################################################################################
+
+env=${1?Usage - ./set-resource-names <environment>}
+
+export resourceGroupName=$env-corp-reporting
+export storageAccountName=${env}corpreporting
+export containerName=${env}corpreportingapi
+export sqlBackupContainerName=${env}corpreportingapi
+export appServicePlanName=AppServicePlan${env^}
+export webAppName=$env-corp-reporting-api
+export webAppSettingsFileName=corporatereportingapi.appSettings
+export functionAppServicePlanName=FunctionAppServicePlan${env^}
+export functionAppName=$env-corp-reporting-reminders
+export functionAppSettingsFileName=corporatereportingreminders.appSettings
+export sqlInstanceName=$env-corp-reporting-sql
+export sqlDatabaseName=$env-corp-reporting-db
+export apiSecurityGroupName="APP - U - Corporate Reporting - API Users"
+export adminSecurityGroupName="APP - U - Corporate Reporting - Admin Users"
+export reportingSecurityGroupName="APP - U - Corporate Reporting - Reports Users"
+export supportSecurityGroupName="APP - U - Corporate Reporting - Support Users"
+export dataCentre=uksouth
+export sqlFirewallRuleName="Corporate Reporting (${env^}) access from Azure Services"
+export zscalarFirewallRuleName="Zscaler London III"
+export appRegistrationDisplayName="Corporate Reporting API ${env^}"
+export webApiRootUrl=https://$webAppName.azurewebsites.net
+export orbIntegrationApiWebAppName=$env-orb-integration-api
+export orbIntegrationApiSettingsFilename=orb-integration-api.appSettings

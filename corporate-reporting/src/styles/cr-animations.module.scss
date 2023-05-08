@@ -1,0 +1,25 @@
+@mixin slideDownIn20 {
+  animation-name: fadeIn, slideDownIn20;
+  animation-duration: 0.376s;
+  animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownIn20 {
+  from {
+    transform: translate3d(0px, -20px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}

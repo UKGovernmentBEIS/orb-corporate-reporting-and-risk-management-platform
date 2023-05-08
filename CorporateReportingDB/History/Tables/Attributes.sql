@@ -1,0 +1,25 @@
+﻿CREATE TABLE [History].[Attributes]
+(
+	[ID] INT NOT NULL,
+	[Title] NVARCHAR(50) NULL,
+	[AttributeTypeID] INT NOT NULL,
+	[AttributeValue] NVARCHAR(255) NULL,
+	[BenefitID] INT NULL,
+	[CommitmentID] INT NULL,
+	[KeyWorkAreaID] INT NULL,
+	[MetricID] INT NULL,
+	[WorkStreamID] INT NULL,
+	[MilestoneID] INT NULL,
+	[SysStartTime] DATETIME2(0) NOT NULL,
+	[SysEndTime] DATETIME2(0) NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[RiskID] INT NULL,
+	[PartnerOrganisationRiskID] INT NULL,
+	[DirectorateID] INT NULL,
+	[ProjectID] INT NULL,
+	[ReportingEntityID] INT NULL,
+	[DependencyID] INT NULL,
+	[PartnerOrganisationID] INT NULL,
+	[RiskMitigationActionID] INT NULL,
+	[PartnerOrganisationRiskMitigationActionID] INT NULL
+) ON [PRIMARY]

@@ -1,0 +1,10 @@
+steps:
+- task: AzureRmWebAppDeployment@3
+  displayName: 'Deploy Azure App Service'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (3e78a638-67d3-4bf6-9aed-6e4960e5e620)'
+    WebAppName: corporatereportingapitest
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+    TakeAppOfflineFlag: true
+    UseWebDeploy: true
+    RenameFilesFlag: true

@@ -1,0 +1,244 @@
+#!/bin/bash
+
+set -e
+
+######################################################################################################
+# Script: install-corporate-reporting
+#
+# This script provisions and configures the following resources in Azure to support a deployment 
+# of the Corporate Reporting application:
+#
+#     * Resource Group
+#     * App Service Plan (for Web App)
+#     * App Service Plan (for Function App)
+#     * Web App (to run Corporate Reporting Web API)
+#     * Function App (to run Corporate Reporting batch job to send email notifications)
+#     * Storage Account & Container (used for logging by Web API)
+#     * Security Groups (for accounts that will have access to the SQL Azure database)
+#     * Azure SQL instance and DB
+#
+# Parameters:
+#
+#     1) The environment name
+#     2) The Admin username for the SQL Azure Instance
+#     3) The Admin password for the SQL Azure Instance
+#     4) The GOV.UK Notify API key to use when sending emails
+#     5) The Audience (Uri) of the App Registration for the Web API
+#     6) The Metadata Address for the Web API App Registration
+#     7) The Tenant (directory) for the Web API App Registration
+#     8) The CORS origin to use in responses (this should be set to the domain for the SharePoint site)
+#     9) The required SQL database service level, e.g. S2
+#     10) The SQL database tier (Basic, Standard or Premium)
+#     11) The number of DTUs to use for the database
+#     12) The maximum size of the SQL database
+#     13) ZScalar firewall rule start IP address
+#     14) ZScalar firewall rule end IP address
+#
+######################################################################################################
+
+usage='Usage - ./install-corporate-reporting <environment> <sql-admin-username> <sql-admin-password> <gov-notify-api-key> <app-reg-audience> <app-reg-metadata-address> <app-reg-tenant> <cors-origin> <sql-db-level> <sql-db-tier> <sql-db-dtus> <sql-db-max-size> <zscalar-firewall-rule-start-ip> <zscalar-firewall-rule-end-ip>'
+env=${1?$usage}
+sqlAdminUsername=${2?$usage}
+sqlAdminPassword=${3?$usage}
+govUkNotifyApiKey=${4?$usage}
+appRegAudience=${5?$usage}
+appRegMetadataAddress=${6?$usage}
+appRegTenant=${7?$usage}
+corsOrigin=${8?$usage}
+dbLevel=${9?$usage}
+dbTier=${10?$usage}
+dbDtus=${11?$usage}
+dbMaxSize=${12?$usage}
+zscalarFirewallRuleStartIP=${13?$usage}
+zscalarFirewallRuleEndIP=${14?$usage}
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+# Set-up database connection strings
+webAppConnectionString="metadata=res://*/Models.CorporateReporting.csdl|res://*/Models.CorporateReporting.ssdl|res://*/Models.CorporateReporting.msl;provider=System.Data.SqlClient;provider connection string=\"data source=$sqlInstanceName.database.windows.net;initial catalog=$sqlDatabaseName;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;App=EntityFramework\""
+functionAppConnectionString="Server=tcp:$sqlInstanceName.database.windows.net,1433;Initial Catalog=$sqlDatabaseName;Persist Security Info=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+checkSecurityGroup () {
+    # Parameter 1: Security Group Name
+
+    if az ad group show --group "$1"
+    then
+        echo "Security Group already exists - no action required"
+    else
+        echo "Security Group '$1' does not exist and must be created"
+        exit 1
+    fi
+}
+
+echo "Creating Resource Group $resourceGroupName..."
+
+if az group show --name $resourceGroupName
+then
+    echo "Resource group already exists - no action required"
+else
+    # Create a resource group
+    az group create --location $dataCentre --name $resourceGroupName
+fi
+
+echo "Creating Storage Account $storageAccountName..."
+
+if az storage account show --name $storageAccountName --resource-group $resourceGroupName
+then
+    echo "Storage account already exists - no action required"
+else
+    # Create a storage account
+    az storage account create --name $storageAccountName --resource-group $resourceGroupName --kind Storage --sku Standard_LRS --default-action Allow
+fi
+
+echo "Creating Storage Container $containerName..."
+
+if az storage container show --name $containerName --account-name $storageAccountName
+then
+    echo "Storage container already exists - no action required"
+else
+    # Create storage container
+    az storage container create --name $containerName --account-name $storageAccountName --auth-mode key --public-access off
+fi
+
+echo "Checking Security Group for API access to SQL database $apiSecurityGroupName..."
+
+checkSecurityGroup "$apiSecurityGroupName"
+
+echo "Checking Security Group for Admin access to SQL database $adminSecurityGroupName..."
+
+checkSecurityGroup "$adminSecurityGroupName"
+
+echo "Checking Security Group for Reporting access to SQL database $reportingSecurityGroupName..."
+
+checkSecurityGroup "$reportingSecurityGroupName"
+
+echo "Checking Security Group for Support access to SQL database $supportSecurityGroupName..."
+
+checkSecurityGroup "$supportSecurityGroupName"
+
+echo "Creating Web App Service Plan $appServicePlanName..."
+
+# az appservice plan show does not return a non-zero value if the App Service Plan does not exists
+# Use grep to check the response to see if a value is returned
+
+if az appservice plan show --name $appServicePlanName --resource-group $resourceGroupName | grep id
+then
+    echo "Web App Service plan already exists - no action required"
+else
+    # Create an App Service plan
+    az appservice plan create --name $appServicePlanName --resource-group $resourceGroupName --sku S1
+fi
+
+echo "Creating Web App $webAppName..."
+
+if az webapp show --name $webAppName --resource-group $resourceGroupName
+then
+    echo "Web app already exists - no action required"
+else
+    # Create a Web App
+    az webapp create --name $webAppName --resource-group $resourceGroupName --plan $appServicePlanName
+
+    # Create Managed Identity for the Web App
+    az webapp identity assign --name $webAppName --resource-group $resourceGroupName
+ fi
+
+echo "Configuring Web App $webAppName..."
+
+if az webapp show --name $webAppName --resource-group $resourceGroupName
+then
+    # Configure Web App settings
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings @$webAppSettingsFileName
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings "GovUkNotifyApiKey=$govUkNotifyApiKey"
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings "ida:Audience=$appRegAudience"
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings "ida:MetadataAddress=$appRegMetadataAddress"
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings "ida:Tenant=$appRegTenant"
+    az webapp config appsettings set --name $webAppName --resource-group $resourceGroupName --settings "CorsOrigin=$corsOrigin"
+
+    # Configure Web App connection strings
+    az webapp config connection-string set --connection-string-type Custom --name $webAppName --resource-group $resourceGroupName --settings "Entities='$webAppConnectionString'"
+
+    # Configure logging to Storage Container
+    apiResourceId=$(az resource list --name $webAppName --query [0].id --output tsv)
+    start=`date -d "-1 hour" '+%Y-%m-%dT%H:%M:%SZ'`
+    end=`date -d "10 years" '+%Y-%m-%dT%H:%M:%SZ'`
+    sasToken=$(az storage container generate-sas --account-name $storageAccountName --name $containerName --permissions dlrw --start $start --expiry $end --output tsv)
+    sasUrl="https://$storageAccountName.blob.core.windows.net/$containerName?$sasToken"
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.level=Error
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.sasUrl=$sasUrl
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.retentionInDays=7
+fi
+
+echo "Creating Function App $functionAppName..."
+
+if az functionapp show --name $functionAppName --resource-group $resourceGroupName
+then
+    echo "Function app already exists - no action required"
+else
+    # Create a Function App to host the email notification scheduled task
+    az functionapp create --name $functionAppName --resource-group $resourceGroupName --storage-account $storageAccountName --consumption-plan-location $dataCentre --os-type Windows --runtime dotnet
+
+    # Create Managed Identity for the Function App
+    az functionapp identity assign --name $functionAppName --resource-group $resourceGroupName 
+fi
+
+echo "Configuring Function App $functionAppName..."
+
+if az functionapp show --name $functionAppName --resource-group $resourceGroupName
+then
+    # Configure Function App settings
+    az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroupName --settings @$functionAppSettingsFileName
+    az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroupName --settings "sqldb_connection=$functionAppConnectionString"
+    az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroupName --settings "GovUkNotifyApiKey=$govUkNotifyApiKey"
+fi
+
+echo "Creating SQL Azure Instance $sqlInstanceName..."
+
+if az sql server show --name $sqlInstanceName --resource-group $resourceGroupName
+then
+    echo "SQL Azure Instance already exists - no action required"
+else
+    # Create a SQL Azure Instance
+    az sql server create --name $sqlInstanceName --resource-group $resourceGroupName --admin-user $sqlAdminUsername --admin-password $sqlAdminPassword --location $dataCentre
+fi
+
+echo "Configuring SQL Azure Instance $sqlInstanceName..."
+
+if az sql server show --name $sqlInstanceName --resource-group $resourceGroupName
+then
+  # Configure the Instance to allow Azure AD authentication by setting-up an AD Admin
+  # The AD Admin will be a Group so that users can be added as required
+  objectId=$(az ad group show --group "$adminSecurityGroupName" --query objectId --output tsv)
+  az sql server ad-admin create --server $sqlInstanceName --resource-group $resourceGroupName --object-id $objectId --display-name "$adminSecurityGroupName"
+
+  if az sql server firewall-rule show --name "$sqlFirewallRuleName" --server $sqlInstanceName --resource-group $resourceGroupName
+  then
+    echo "Firewall rule $sqlFirewallRuleName already exists - no action required"
+  else
+    # Add a firewall rule to permit connections from Azure services (e.g. the Web App and Function App)
+    az sql server firewall-rule create --resource-group $resourceGroupName --server $sqlInstanceName --name "$sqlFirewallRuleName" --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+  fi
+
+  if az sql server firewall-rule show --name "$zscalarFirewallRuleName" --server $sqlInstanceName --resource-group $resourceGroupName
+  then
+    echo "Firewall rule $zscalarFirewallRuleName already exists - no action required"
+  else
+    # Add a firewall rule to permit connections from ZScalar (to support the Portfolio team connecting to the database using PowerBI)
+    az sql server firewall-rule create --resource-group $resourceGroupName --server $sqlInstanceName --name "$zscalarFirewallRuleName" --start-ip-address $zscalarFirewallRuleStartIP --end-ip-address $zscalarFirewallRuleEndIP
+  fi
+fi
+
+echo "Creating SQL Azure Database $sqlDatabaseName..."
+
+if az sql db show --name $sqlDatabaseName --server $sqlInstanceName --resource-group $resourceGroupName
+then
+    echo "SQL Azure Database already exists - no action required"
+else
+    # Create a SQL Azure Database
+    az sql db create --name $sqlDatabaseName --resource-group $resourceGroupName --server $sqlInstanceName --service-objective $dbLevel --edition $dbTier --capacity $dbDtus --max-size $dbMaxSize
+fi
+
+echo "Installation complete - the Web App is now available at the following url:"
+
+# Copy the result of the following command into a browser to see the web app.
+echo http://$webAppName.azurewebsites.net

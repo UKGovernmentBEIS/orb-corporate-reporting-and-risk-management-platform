@@ -1,0 +1,25 @@
+pool:
+  name: Hosted VS2017
+  demands: msbuild
+
+steps:
+- task: MSBuild@1
+  displayName: 'Build CorporateReportingDB project'
+  inputs:
+    solution: '**/CorporateReportingDB.sqlproj'
+    msbuildArguments: '/t:build /p:CmdLineInMemoryStorage=True'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    Contents: '**\*.dacpac'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    Contents: '**\CorporateReportingDB.publish.xml'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'

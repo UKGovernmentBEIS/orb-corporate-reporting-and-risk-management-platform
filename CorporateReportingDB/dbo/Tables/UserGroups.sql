@@ -1,0 +1,53 @@
+﻿CREATE TABLE [dbo].[UserGroups]
+(
+	[ID] INT IDENTITY(1,1) NOT NULL,
+	[Title] NVARCHAR(50) NULL,
+	[UserID] INT NOT NULL,
+	[GroupID] INT NOT NULL,
+	[IsRiskAdmin] BIT NULL,
+	[SysStartTime] DATETIME2(0) GENERATED ALWAYS AS ROW START NOT NULL,
+	[SysEndTime] DATETIME2(0) GENERATED ALWAYS AS ROW END NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[Discriminator] NVARCHAR(50) NOT NULL DEFAULT N'UserGroup',
+	CONSTRAINT [PK_UserGroups] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+	CONSTRAINT [UQ_UserGroups] UNIQUE NONCLUSTERED 
+(
+	[UserID] ASC,
+	[GroupID] ASC,
+	[Discriminator] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+	PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])
+) ON [PRIMARY]
+WITH
+(
+SYSTEM_VERSIONING = ON ( HISTORY_TABLE = [History].[UserGroups] )
+)
+GO
+
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [FK_UserGroups_Groups] FOREIGN KEY([GroupID])
+REFERENCES [dbo].[Groups] ([ID])
+GO
+ALTER TABLE [dbo].[UserGroups] CHECK CONSTRAINT [FK_UserGroups_Groups]
+GO
+
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [FK_UserGroups_ModifiedByUsers] FOREIGN KEY([ModifiedByUserID])
+REFERENCES [dbo].[Users] ([ID])
+GO
+ALTER TABLE [dbo].[UserGroups] CHECK CONSTRAINT [FK_UserGroups_ModifiedByUsers]
+GO
+
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [FK_UserGroups_Users] FOREIGN KEY([UserID])
+REFERENCES [dbo].[Users] ([ID])
+GO
+ALTER TABLE [dbo].[UserGroups] CHECK CONSTRAINT [FK_UserGroups_Users]
+GO
+
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [DF_UserGroups_IsRiskAdmin] DEFAULT ((0)) FOR [IsRiskAdmin]
+GO
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [DF_UserGroups_SysStart] DEFAULT (sysutcdatetime()) FOR [SysStartTime]
+GO
+ALTER TABLE [dbo].[UserGroups] ADD CONSTRAINT [DF_UserGroups_SysEnd] DEFAULT (CONVERT(DATETIME2(0),'9999-12-31 23:59:59')) FOR [SysEndTime]
+GO

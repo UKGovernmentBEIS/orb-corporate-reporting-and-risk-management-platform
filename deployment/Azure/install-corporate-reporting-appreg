@@ -1,0 +1,47 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: install-corporate-reporting-appreg
+#
+# This script provisions and configures the following resources in Azure to support a deployment 
+# of the Corporate Reporting application:
+#
+#     * App Registration
+#
+# Parameters:
+#
+#     1) The environment name
+#     2) AD Domain - e.g. beisdigitaldev.onmicrosoft.com
+######################################################################################################
+
+set -e
+
+env=${1?Usage - ./install-corporate-reporting-appreg <environment> <ad-domain>}
+adDomain=${2?Usage - ./install-corporate-reporting-appreg <environment> <ad-domain>}
+
+. set-resource-names $env
+
+appRegistrationIdentifierUri=https://$adDomain/CorporateReportingAPI${env^}
+
+echo "Creating App Registration $appRegistrationDisplayName..."
+
+if az ad app show --id $appRegistrationIdentifierUri
+then
+    echo "App Registration already exists - no action required"
+else
+    # Create an App Registration
+    az ad app create --display-name "$appRegistrationDisplayName" --available-to-other-tenants false --homepage $webApiRootUrl --oauth2-allow-implicit-flow false --reply-urls $webApiRootUrl/.auth/login/aad/callback --identifier-uris $appRegistrationIdentifierUri --required-resource-accesses @corporate-reporting-appreg-required-resource-accesses.json
+fi
+
+echo "Creating Service Principal $appRegistrationDisplayName..."
+
+if az ad sp show --id $appRegistrationIdentifierUri
+then
+    echo "Service Principal already exists - no action required"
+else
+    # Create a Service Principal (this appears in the Enterprise Applications list in the Azure Portal)
+    az ad sp create --id $appRegistrationIdentifierUri
+    az ad sp update --id $appRegistrationIdentifierUri --add tags WindowsAzureActiveDirectoryIntegratedApp
+fi
+
+echo "Installation complete."

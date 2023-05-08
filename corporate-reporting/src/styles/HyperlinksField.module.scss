@@ -1,0 +1,12 @@
+.hyperlinksField {
+    ul.linksList {
+        list-style-type: none;
+        margin: 0 0 9px;
+        padding-left: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

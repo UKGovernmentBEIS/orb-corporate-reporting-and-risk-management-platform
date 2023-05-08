@@ -1,0 +1,22 @@
+﻿CREATE VIEW [reports].[Attributes]
+AS
+	SELECT dbo.Attributes.ID AS [Attribute ID]
+		, dbo.AttributeTypes.Title AS [Attribute]
+		, dbo.Attributes.AttributeValue AS [Attribute Value]
+		, dbo.Attributes.BenefitID AS [Benefit ID]
+		, dbo.Attributes.CommitmentID AS [Commitment ID]
+		, dbo.Attributes.KeyWorkAreaID AS [Key Work Area ID]
+		, dbo.Attributes.MetricID AS [Metric ID]
+		, dbo.Attributes.MilestoneID AS [Milestone ID]
+		, dbo.Attributes.WorkStreamID AS [Work Stream ID]
+		, dbo.Attributes.RiskID AS [Risk ID]
+		, dbo.Attributes.PartnerOrganisationRiskID AS [Partner Organisation Risk ID]
+		, dbo.Attributes.DirectorateID AS [Directorate ID]
+		, dbo.Attributes.ProjectID AS [Project ID]
+		, dbo.Attributes.ReportingEntityID AS [Reporting Entity ID]
+		, dbo.Attributes.DependencyID AS [Dependency ID]
+		, dbo.Attributes.PartnerOrganisationID AS [Partner Organisation ID]
+		, dbo.Attributes.PartnerOrganisationRiskMitigationActionID AS [Partner Organisation Risk Mitigating Action ID]
+		, dbo.Attributes.RiskMitigationActionID AS [Risk Mitigating Action ID]
+	FROM dbo.Attributes INNER JOIN
+		dbo.AttributeTypes ON dbo.Attributes.AttributeTypeID = dbo.AttributeTypes.ID

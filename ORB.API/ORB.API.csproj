@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-ORB.API-42EE703F-A3D4-4690-A86E-96A59F1BB9DC</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ORB.Data\Repositories\ContributorRepository.cs" Link="ContributorRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.14" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="5.0.8" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.10.0" />
+    <PackageReference Include="Microsoft.OData.Core" Version="7.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ORB.Core\ORB.Core.csproj" />
+    <ProjectReference Include="..\ORB.Services\ORB.Services.csproj" />
+    <ProjectReference Include="..\ORB.Data\ORB.Data.csproj" />
+  </ItemGroup>
+
+</Project>

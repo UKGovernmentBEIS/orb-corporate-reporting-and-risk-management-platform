@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/03/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.9.1905.3, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-1EB06FF228464EC789AE4EF09588A918">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-1EB06FF228464EC789AE4EF09588A918" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='fc74efbc-5a24-491d-be49-dad804778405'&amp;hash=636948279316421707" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="false" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="2" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="false" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+            <pnp:NavigationNode Title="Reporting Admin" Url="{site}/SitePages/ReportingData-Directorates.aspx">
+              <pnp:NavigationNode Title="Benefits" Url="{site}/SitePages/ReportingData-Benefits.aspx" />
+              <pnp:NavigationNode Title="Commitments" Url="{site}/SitePages/ReportingData-Commitments.aspx" />
+              <pnp:NavigationNode Title="Dependencies" Url="{site}/SitePages/ReportingData-Dependencies.aspx" />
+              <pnp:NavigationNode Title="Directorates" Url="{site}/SitePages/ReportingData-Directorates.aspx" />
+              <pnp:NavigationNode Title="Groups" Url="{site}/SitePages/ReportingData-Groups.aspx" />
+              <pnp:NavigationNode Title="Key Work Areas" Url="{site}/SitePages/ReportingData-KeyWorkAreas.aspx" />
+              <pnp:NavigationNode Title="Metrics" Url="{site}/SitePages/ReportingData-Metrics.aspx" />
+              <pnp:NavigationNode Title="Milestones" Url="{site}/SitePages/ReportingData-Milestones.aspx" />
+              <pnp:NavigationNode Title="Projects" Url="{site}/SitePages/ReportingData-Projects.aspx" />
+              <pnp:NavigationNode Title="Partner Organisations" Url="{site}/SitePages/ReportingData-PartnerOrganisations.aspx" />
+              <pnp:NavigationNode Title="Partner Organisation Risks" Url="{site}/SitePages/ReportingData-PartnerOrganisationRisks.aspx" />
+              <pnp:NavigationNode Title="Partner Organisation Risk Mitigation Actions" Url="{site}/SitePages/ReportingData-PartnerOrganisationRiskMitigationActions.aspx" />
+              <pnp:NavigationNode Title="Risks" Url="{site}/SitePages/ReportingData-Risks.aspx" />
+              <pnp:NavigationNode Title="Risk Mitigation Actions" Url="{site}/SitePages/ReportingData-RiskMitigationActions.aspx" />
+              <pnp:NavigationNode Title="Work Streams" Url="{site}/SitePages/ReportingData-WorkStreams.aspx" />
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="System Administration" Url="{site}/SitePages/Administration-Administrators.aspx">
+              <pnp:NavigationNode Title="Administrators" Url="{site}/SitePages/Administration-Administrators.aspx" />
+              <pnp:NavigationNode Title="Attribute Types" Url="{site}/SitePages/Administration-Attributes.aspx" />
+              <pnp:NavigationNode Title="Benefit Types" Url="{site}/SitePages/Administration-BenefitTypes.aspx" />
+              <pnp:NavigationNode Title="Milestone Types" Url="{site}/SitePages/Administration-MilestoneTypes.aspx" />
+              <pnp:NavigationNode Title="Project Attribute Types" Url="{site}/SitePages/Administration-ProjectAttributes.aspx" />
+              <pnp:NavigationNode Title="Risk Types" Url="{site}/SitePages/Administration-RiskTypes.aspx" />
+              <pnp:NavigationNode Title="Risk Type Risk Appetites" Url="{site}/SitePages/Administration-RiskTypeRiskAppetites.aspx" />
+              <pnp:NavigationNode Title="Units" Url="{site}/SitePages/Administration-Units.aspx" />
+              <pnp:NavigationNode Title="Users" Url="{site}/SitePages/Administration-Users.aspx" />
+              <pnp:NavigationNode Title="User Directorates" Url="{site}/SitePages/Administration-UserDirectorates.aspx" />
+              <pnp:NavigationNode Title="User Groups" Url="{site}/SitePages/Administration-UserGroups.aspx" />
+              <pnp:NavigationNode Title="User Partner Organisations" Url="{site}/SitePages/Administration-UserPartnerOrganisations.aspx" />
+              <pnp:NavigationNode Title="User Projects" Url="{site}/SitePages/Administration-UserProjects.aspx" />
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Risk Register" Url="{site}/SitePages/RiskRegister.aspx" />
+            <pnp:NavigationNode Title="Conversations" Url="{site}/_layouts/15/groupstatus.aspx?Target=CONVERSATIONS&amp;Source=QuickLaunch" IsExternal="true" />
+            <pnp:NavigationNode Title="Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Notebook" Url="{site}/_layouts/15/groupstatus.aspx?Target=NOTEBOOK" IsExternal="true" />
+            <pnp:NavigationNode Title="Pages" Url="{site}/SitePages/Forms/ByAuthor.aspx" />
+            <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+      <pnp:ClientSidePages>
+        <pnp:ClientSidePage PageName="Home.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;4671e4b1-eadb-4772-bf5a-03165981d93b&quot;, &quot;instanceId&quot;: &quot;be1d00cd-ce87-4e1b-a7d5-8b92065abda1&quot;, &quot;title&quot;: &quot;CR - My Progress Updates&quot;, &quot;description&quot;: &quot;A web part for users to view and enter progress updates&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;My Progress Updates web part&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="4671e4b1-eadb-4772-bf5a-03165981d93b" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Directorates.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Benefits.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:8}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Commitments.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:9}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Dependencies.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:10}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Directorates.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Groups.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:0}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-KeyWorkAreas.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Metrics.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:6}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Milestones.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:7}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Projects.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:2}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrganisations.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:3}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrganisationRisks.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:13}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-PartnerOrganisationRiskMitigationActions.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:14}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-Risks.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:11}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-RiskMitigationActions.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:12}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="ReportingData-WorkStreams.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;9af7e69c-ee7a-43f3-b32d-c9b9985f39dc&quot;, &quot;instanceId&quot;: &quot;dded765d-59fa-4054-8492-4c4ef45430a8&quot;, &quot;title&quot;: &quot;CR - Reference Data Admin&quot;, &quot;description&quot;: &quot;Manage reference data for the corporate reporting tool&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;https://localhost:44303/odata&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:5}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="9af7e69c-ee7a-43f3-b32d-c9b9985f39dc" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-Administrators.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:12}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-Attributes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:7}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-BenefitTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:6}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-MilestoneTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:5}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-ProjectAttributes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:8}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-RiskTypes.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:9}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-RiskTypeRiskAppetites.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:10}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-Units.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:11}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-Users.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:0}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-UserDirectorates.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:2}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-UserGroups.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:1}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-UserPartnerOrganisations.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:3}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="Administration-UserProjects.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;5ad73725-2381-4357-9bc3-ae9818f8069f&quot;, &quot;instanceId&quot;: &quot;cc785036-bcff-4b44-8080-3b7ce2e8f507&quot;, &quot;title&quot;: &quot;CR - System Administration&quot;, &quot;description&quot;: &quot;Allows system administrators to add, edit and delete reference data.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;System Administration&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;,&quot;entity&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="5ad73725-2381-4357-9bc3-ae9818f8069f" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+        <pnp:ClientSidePage PageName="RiskRegister.aspx" PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="OneColumn">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;7a15f71b-92d1-4de3-902d-53d2dedf65f1&quot;, &quot;instanceId&quot;: &quot;c6cf65f7-8be5-4367-892e-caa008aca2fb&quot;, &quot;title&quot;: &quot;CR - Risk Register&quot;, &quot;description&quot;: &quot;Register of business risks&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;Risk Register&quot;,&quot;appIdUri&quot;:&quot;{parameter:appIdUrl}&quot;,&quot;apiUrl&quot;:&quot;{parameter:apiUrl}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="7a15f71b-92d1-4de3-902d-53d2dedf65f1" Order="1" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="" AuthorByLineId="-1" />
+          <pnp:Security>
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false" />
+          </pnp:Security>
+        </pnp:ClientSidePage>
+      </pnp:ClientSidePages>
+      <pnp:Header Layout="Standard" />
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

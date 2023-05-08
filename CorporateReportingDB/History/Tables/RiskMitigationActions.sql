@@ -1,0 +1,26 @@
+﻿CREATE TABLE [History].[RiskMitigationActions]
+(
+	[ID] INT NOT NULL,
+	[Title] NVARCHAR(255) NULL,
+	[Description] NVARCHAR(750) NULL,
+	[RiskID] INT NULL,
+	[RiskMitigationActionCode] INT NULL,
+	[BaselineDate] DATE NULL,
+	[ForecastDate] DATE NULL,
+	[ActualDate] DATE NULL,
+	[OwnerUserID] INT NULL,
+	[EntityStatusID] INT NULL,
+	[EntityStatusDate] DATETIME2(7) NULL,
+	[SysStartTime] DATETIME2(0) NOT NULL,
+	[SysEndTime] DATETIME2(0) NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[ActionIsOngoing] BIT NULL,
+	[ReportingFrequency] TINYINT NULL,
+	[ReportingDueDay] TINYINT NULL,
+	[ReportingStartDate] DATETIME2(0) NULL,
+	[Discriminator] NVARCHAR(MAX) NOT NULL DEFAULT N'CorporateRiskMitigationAction',
+	[OngoingActionReviewFrequency] TINYINT NULL,
+	[OngoingActionReviewDueDay] TINYINT NULL,
+	[OngoingActionReviewStartDate] DATETIME2(0) NULL,
+	[LeadUserID] INT NULL
+) ON [PRIMARY]

@@ -1,0 +1,5 @@
+{
+  "AuthorisationRole": "access_as_application",
+  "DbConnectionSettings__DatabaseAccessTokenUrl": "https://database.windows.net/",
+  "EmailSettings__ProjectReportSubmittedTemplateId": "57362598-0889-4f03-9534-58b42678ab25"
+}

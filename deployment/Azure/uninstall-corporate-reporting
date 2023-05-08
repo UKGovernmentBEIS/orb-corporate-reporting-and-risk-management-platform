@@ -1,0 +1,50 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: uninstall-corporate-reporting
+#
+# This script deletes the following resources in Azure used by a deployment of the 
+# Corporate Reporting application:
+#
+#     * Resource Group (containing Web App, Function App, SQL Azure Database & Storage Account)
+#     * Security Groups (used to manage access to the SQL Azure database)
+#
+# Parameters:
+#
+#     1) The environment name
+######################################################################################################
+
+env=${1?Usage - ./uninstall-corporate-reporting <environment>}
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+removeSecurityGroup () {
+    # Parameter 1: Security Group Name
+
+    if az ad group show --group "$1"
+    then
+        # Delete Resource Group containing Web App
+        az ad group delete --group "$1" # --yes
+    fi
+}
+
+echo "Removing Resource Group $resourceGroupName (if it exists)..."
+
+if az group show --name $resourceGroupName
+then
+    # Delete Resource Group containing Web App
+    az group delete --name $resourceGroupName # --yes
+fi
+
+echo "Removing Security Group $apiSecurityGroupName (if it exists)..."
+
+removeSecurityGroup "$apiSecurityGroupName"
+
+echo "Removing Security Group $adminSecurityGroupName (if it exists)..."
+
+removeSecurityGroup "$adminSecurityGroupName"
+
+echo "Removing Security Group $reportingSecurityGroupName (if it exists)..."
+
+removeSecurityGroup "$reportingSecurityGroupName"

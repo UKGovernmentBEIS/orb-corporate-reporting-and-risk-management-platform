@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.12.1",
+    "libraryName": "corporate-reporting",
+    "libraryId": "0f2ef199-a68e-4115-817a-558b62b85dff",
+    "environment": "spo",
+    "packageManager": "npm",
+    "isCreatingSolution": false,
+    "componentType": "webpart"
+  }
+}

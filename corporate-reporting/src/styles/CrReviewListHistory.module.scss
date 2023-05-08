@@ -1,0 +1,10 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+@import "../styles/cr.module";
+
+.crReviewListHistory {
+  margin-top: 12px;
+
+  .history {
+    opacity: 0.7;
+  }
+}

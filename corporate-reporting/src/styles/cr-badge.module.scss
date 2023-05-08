@@ -1,0 +1,52 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+@import "./cr-colors.module.scss";
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  a.badge:hover,
+  a.badge:focus {
+    text-decoration: none;
+  }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badgePill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+// Colors
+//
+
+@each $color, $value, $contrast in $theme-colors {
+  .badge#{$color} {
+    color: $contrast;
+    background-color: $value;
+  }
+}

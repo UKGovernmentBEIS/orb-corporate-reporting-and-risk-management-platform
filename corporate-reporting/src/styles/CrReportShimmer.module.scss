@@ -1,0 +1,23 @@
+.crReportShimmer {
+  position: relative;
+
+  .reportShimmerOverlay {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    z-index: 1;
+    background-color: transparent;
+
+    .reportShimmerOverlayMessage {
+      background-color: white;
+      padding: 24px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 0px;
+      box-sizing: border-box;
+      outline: transparent solid 3px;
+    }
+  }
+
+  .disableShimmerAnimation * {
+    animation: none;
+  }
+}

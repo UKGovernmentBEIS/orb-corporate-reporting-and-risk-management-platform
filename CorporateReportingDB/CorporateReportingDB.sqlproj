@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CorporateReportingDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{968f4ea4-756e-486d-be7a-a9fca9c62abe}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath />
+    <RootNamespace>CorporateReportingDB</RootNamespace>
+    <AssemblyName>CorporateReportingDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="History\" />
+    <Folder Include="History\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="reports\" />
+    <Folder Include="reports\Views\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="RefData" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="reports\Stored Procedures\" />
+    <Folder Include="drafts\" />
+    <Folder Include="drafts\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="History\Tables\UserGroups.sql" />
+    <Build Include="dbo\Tables\UserGroups.sql" />
+    <Build Include="History\Tables\Contributors.sql" />
+    <Build Include="dbo\Tables\Contributors.sql" />
+    <Build Include="History\Tables\Directorates.sql" />
+    <Build Include="dbo\Tables\Directorates.sql" />
+    <Build Include="History\Tables\Groups.sql" />
+    <Build Include="dbo\Tables\Groups.sql" />
+    <Build Include="History\Tables\Users.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\RagOptions.sql" />
+    <Build Include="dbo\Tables\SignOffs.sql" />
+    <Build Include="dbo\Tables\CommitmentUpdates.sql" />
+    <Build Include="History\Tables\Projects.sql" />
+    <Build Include="dbo\Tables\Projects.sql" />
+    <Build Include="History\Tables\Commitments.sql" />
+    <Build Include="dbo\Tables\Commitments.sql" />
+    <Build Include="dbo\Tables\DirectorateUpdates.sql" />
+    <Build Include="History\Tables\KeyWorkAreas.sql" />
+    <Build Include="dbo\Tables\KeyWorkAreas.sql" />
+    <Build Include="dbo\Tables\KeyWorkAreaUpdates.sql" />
+    <Build Include="dbo\Tables\MetricUpdates.sql" />
+    <Build Include="History\Tables\Metrics.sql" />
+    <Build Include="dbo\Tables\Metrics.sql" />
+    <Build Include="dbo\Tables\MeasurementUnits.sql" />
+    <Build Include="dbo\Tables\MilestoneUpdates.sql" />
+    <Build Include="History\Tables\Attributes.sql" />
+    <Build Include="dbo\Tables\Attributes.sql" />
+    <Build Include="History\Tables\Milestones.sql" />
+    <Build Include="dbo\Tables\Milestones.sql" />
+    <Build Include="History\Tables\WorkStreams.sql" />
+    <Build Include="dbo\Tables\WorkStreams.sql" />
+    <Build Include="dbo\Tables\ProjectUpdates.sql" />
+    <Build Include="dbo\Tables\WorkStreamUpdates.sql" />
+    <Build Include="dbo\Tables\EntityStatuses.sql" />
+    <Build Include="History\Tables\Benefits.sql" />
+    <Build Include="dbo\Tables\Benefits.sql" />
+    <Build Include="dbo\Tables\BenefitUpdates.sql" />
+    <Build Include="dbo\Tables\DependencyUpdates.sql" />
+    <Build Include="History\Tables\Dependencies.sql" />
+    <Build Include="dbo\Tables\Dependencies.sql" />
+    <Build Include="dbo\Tables\AttributeTypes.sql" />
+    <Build Include="History\Tables\ProjectAttributes.sql" />
+    <Build Include="dbo\Tables\ProjectAttributes.sql" />
+    <Build Include="dbo\Tables\ProjectAttributeTypes.sql" />
+    <Build Include="dbo\Tables\ProjectBusinessCaseTypes.sql" />
+    <Build Include="dbo\Tables\ProjectPhases.sql" />
+    <Build Include="dbo\Tables\BenefitTypes.sql" />
+    <Build Include="dbo\Tables\DepartmentalObjectives.sql" />
+    <Build Include="dbo\Tables\RiskAppetites.sql" />
+    <Build Include="dbo\Tables\RiskImpactLevels.sql" />
+    <Build Include="dbo\Tables\RiskProbabilities.sql" />
+    <Build Include="dbo\Tables\RiskRegisters.sql" />
+    <Build Include="History\Tables\Risks.sql" />
+    <Build Include="dbo\Tables\Risks.sql" />
+    <Build Include="dbo\Tables\MilestoneTypes.sql" />
+    <Build Include="dbo\Tables\RiskUpdates.sql" />
+    <Build Include="History\Tables\UserProjects.sql" />
+    <Build Include="dbo\Tables\UserProjects.sql" />
+    <Build Include="History\Tables\UserDirectorates.sql" />
+    <Build Include="dbo\Tables\UserDirectorates.sql" />
+    <Build Include="History\Tables\RiskMitigationActions.sql" />
+    <Build Include="dbo\Tables\RiskMitigationActions.sql" />
+    <Build Include="History\Tables\UserRoles.sql" />
+    <Build Include="dbo\Tables\UserRoles.sql" />
+    <Build Include="History\Tables\PartnerOrganisations.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisations.sql" />
+    <Build Include="History\Tables\UserPartnerOrganisations.sql" />
+    <Build Include="dbo\Tables\UserPartnerOrganisations.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationUpdates.sql" />
+    <Build Include="dbo\Tables\RiskMitigationActionUpdates.sql" />
+    <Build Include="dbo\Tables\RiskRiskTypes.sql" />
+    <Build Include="dbo\Tables\RiskTypes.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="reports\Views\Directorates.sql" />
+    <Build Include="dbo\Views\PreviousCommitmentUpdates.sql" />
+    <Build Include="reports\Views\SignOffs.sql" />
+    <Build Include="reports\Views\CommitmentUpdates.sql" />
+    <Build Include="dbo\Views\PreviousDirectorateUpdates.sql" />
+    <Build Include="dbo\Views\PreviousKeyWorkAreaUpdates.sql" />
+    <Build Include="reports\Views\KeyWorkAreaUpdates.sql" />
+    <Build Include="dbo\Views\PreviousMetricUpdates.sql" />
+    <Build Include="reports\Views\MetricUpdates.sql" />
+    <Build Include="dbo\Views\PreviousMilestoneUpdates.sql" />
+    <Build Include="reports\Views\MilestoneUpdates.sql" />
+    <Build Include="dbo\Views\PreviousProjectUpdates.sql" />
+    <Build Include="dbo\Views\PreviousWorkStreamUpdates.sql" />
+    <Build Include="reports\Views\Projects.sql" />
+    <Build Include="reports\Views\WorkStreamUpdates.sql" />
+    <Build Include="dbo\Views\PreviousBenefitUpdates.sql" />
+    <Build Include="reports\Views\BenefitUpdates.sql" />
+    <Build Include="dbo\Views\PreviousDependencyUpdates.sql" />
+    <Build Include="reports\Views\DependencyUpdates.sql" />
+    <Build Include="reports\Views\Attributes.sql" />
+    <Build Include="reports\Views\DirectorateUpdates.sql" />
+    <Build Include="reports\Views\ProjectAttributes.sql" />
+    <Build Include="reports\Views\ProjectUpdates.sql" />
+    <Build Include="reports\Views\Benefits.sql" />
+    <Build Include="reports\Views\Commitments.sql" />
+    <Build Include="reports\Views\Dependencies.sql" />
+    <Build Include="reports\Views\KeyWorkAreas.sql" />
+    <Build Include="reports\Views\Metrics.sql" />
+    <Build Include="reports\Views\Risks.sql" />
+    <Build Include="reports\Views\Milestones.sql" />
+    <Build Include="reports\Views\RiskUpdates.sql" />
+    <Build Include="reports\Views\WorkStreams.sql" />
+    <Build Include="reports\Views\UserAssociations.sql" />
+    <Build Include="Security\reports_reader.sql" />
+    <Build Include="Security\History.sql" />
+    <Build Include="Security\reports.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationRiskMitigationActions.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationRiskMitigationActionUpdates.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationRiskRiskTypes.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationRisks.sql" />
+    <Build Include="dbo\Tables\PartnerOrganisationRiskUpdates.sql" />
+    <Build Include="History\Tables\PartnerOrganisationRiskMitigationActions.sql" />
+    <Build Include="History\Tables\PartnerOrganisationRiskRiskTypes.sql" />
+    <Build Include="History\Tables\PartnerOrganisationRisks.sql" />
+    <Build Include="reports\Views\RiskMitigationActionUpdates.sql" />
+    <None Include="RefData\CorporateReporting.edmx.RefData.sql" />
+    <Build Include="Security\api_user.sql" />
+    <Build Include="reports\Views\PartnerOrganisations.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRiskMitigationActionUpdates.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRisks.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRisksMitigationActions.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRiskUpdates.sql" />
+    <Build Include="reports\Views\PartnerOrganisationUpdates.sql" />
+    <Build Include="reports\Views\RagFromRILandRP.sql" />
+    <Build Include="dbo\Tables\RagOptionsMapping.sql" />
+    <Build Include="dbo\Tables\Thresholds.sql" />
+    <Build Include="dbo\Tables\ThresholdAppetites.sql" />
+    <Build Include="dbo\Views\PreviousPartnerOrganisationUpdates.sql" />
+    <Build Include="dbo\Tables\ReportStaging.sql" />
+    <Build Include="dbo\Functions\GenerateReportJson.sql" />
+    <Build Include="dbo\Tables\ReportingFrequencies.sql" />
+    <Build Include="reports\Views\FinancialRiskReports.sql" />
+    <Build Include="reports\Views\FinancialRisks.sql" />
+    <Build Include="reports\Views\BenefitAttributes.sql" />
+    <Build Include="reports\Views\CommitmentAttributes.sql" />
+    <Build Include="reports\Views\DirectorateAttributes.sql" />
+    <Build Include="reports\Views\KeyWorkAreaAttributes.sql" />
+    <Build Include="reports\Views\MetricAttributes.sql" />
+    <Build Include="reports\Views\MilestoneAttributes.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRiskAttributes.sql" />
+    <Build Include="reports\Views\RiskAttributes.sql" />
+    <Build Include="reports\Views\WorkStreamAttributes.sql" />
+    <Build Include="dbo\Views\DirectorateReports.sql" />
+    <Build Include="reports\Views\DirectorateUpdates2.sql" />
+    <Build Include="dbo\Tables\ReportingEntities.sql" />
+    <Build Include="dbo\Tables\ReportingEntityTypes.sql" />
+    <Build Include="dbo\Tables\ReportingEntityUpdates.sql" />
+    <Build Include="History\Tables\ReportingEntities.sql" />
+    <Build Include="History\Tables\ReportingEntityTypes.sql" />
+    <Build Include="dbo\Tables\ReportTypes.sql" />
+    <Build Include="History\Tables\ReportTypes.sql" />
+    <Build Include="reports\Views\ReportingEntityUpdates.sql" />
+    <Build Include="reports\Views\ReportingEntities.sql" />
+    <Build Include="reports\Views\ReportingEntityTextProperties.sql" />
+    <Build Include="dbo\Views\ReportingEntityTypeFields.sql" />
+    <Build Include="reports\Views\ReportingEntityUserProperties.sql" />
+    <Build Include="reports\Views\ReportingEntityChoiceProperties.sql" />
+    <Build Include="dbo\Views\ReportingEntityProperties.sql" />
+    <Build Include="reports\Views\ReportingEntityNumberProperties.sql" />
+    <Build Include="reports\Views\ReportingEntityLookupProperties.sql" />
+    <Build Include="reports\Views\ReportingEntityAttributes.sql" />
+    <Build Include="reports\Views\DependencyAttributes.sql" />
+    <Build Include="reports\Views\RiskMitigationActionAttributes.sql" />
+    <Build Include="reports\Views\PartnerOrganisationAttributes.sql" />
+    <Build Include="reports\Views\PartnerOrganisationRiskMitigationActionAttributes.sql" />
+    <Build Include="reports\Stored Procedures\spReportingEntityChoiceProperties.sql" />
+    <Build Include="reports\Stored Procedures\spReportingEntityNumberProperties.sql" />
+    <Build Include="reports\Stored Procedures\spReportingEntityLookupProperties.sql" />
+    <Build Include="reports\Stored Procedures\spReportingEntityTextProperties.sql" />
+    <Build Include="reports\Stored Procedures\spReportingEntityUserProperties.sql" />
+    <Build Include="drafts\Views\DirectorateUpdates.sql" />
+    <Build Include="Security\drafts.sql" />
+    <Build Include="drafts\Views\BenefitUpdates.sql" />
+    <Build Include="drafts\Views\CommitmentUpdates.sql" />
+    <Build Include="drafts\Views\DependencyUpdates.sql" />
+    <Build Include="drafts\Views\KeyWorkAreaUpdates.sql" />
+    <Build Include="drafts\Views\MetricUpdates.sql" />
+    <Build Include="drafts\Views\ProjectUpdates.sql" />
+    <Build Include="drafts\Views\ReportingEntityUpdates.sql" />
+    <Build Include="drafts\Views\WorkStreamUpdates.sql" />
+    <Build Include="drafts\Views\PartnerOrganisationUpdates.sql" />
+    <Build Include="drafts\Views\RiskUpdates.sql" />
+    <Build Include="drafts\Views\RiskMitigationActionUpdates.sql" />
+    <Build Include="drafts\Views\PartnerOrganisationRiskUpdates.sql" />
+    <Build Include="drafts\Views\PartnerOrganisationRiskMitigationActionUpdates.sql" />
+    <Build Include="drafts\Views\KeyWorkAreaMilestoneUpdates.sql" />
+    <Build Include="drafts\Views\WorkStreamMilestoneUpdates.sql" />
+    <Build Include="drafts\Views\PartnerOrganisationMilestoneUpdates.sql" />
+    <Build Include="Security\drafts_reader.sql" />
+    <Build Include="dbo\Tables\RiskRiskMitigationActions.sql" />
+    <Build Include="History\Tables\RiskRiskMitigationActions.sql" />
+    <Build Include="dbo\Tables\RiskDiscussionForums.sql" />
+    <None Include="RefData\EntityStatuses.sql" />
+    <None Include="RefData\RagOptions.sql" />
+    <None Include="RefData\ReportingEntityTypes.sql" />
+    <None Include="RefData\ReportingFrequencies.sql" />
+    <None Include="RefData\ReportTypes.sql" />
+    <None Include="RefData\RiskRegisters.sql" />
+    <None Include="RefData\Roles.sql" />
+    <None Include="RefData\ThresholdAppetites.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CorporateReportingDB.publish.xml" />
+    <None Include="RefData\CARP-775.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CorporateReportingDB.refactorlog" />
+  </ItemGroup>
+  <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <PackageReference Condition="'$(NetCoreBuild)' == 'true'" Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>

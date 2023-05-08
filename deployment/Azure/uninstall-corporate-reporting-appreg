@@ -1,0 +1,32 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: uninstall-corporate-reporting-appreg
+#
+# This script removes the following resources in Azure to support the removal
+# of the Corporate Reporting application:
+#
+#     * App Registration
+#
+# Parameters:
+#
+#     1) The environment name
+#     2) AD Domain - e.g. beisdigitaldev.onmicrosoft.com
+######################################################################################################
+
+env=${1?Usage - ./install-corporate-reporting-appreg <environment> <ad-domain>}
+adDomain=${2?Usage - ./install-corporate-reporting-appreg <environment> <ad-domain>}
+
+. set-resource-names $env
+
+appRegistrationIdentifierUri=https://$adDomain/CorporateReportingAPI${env^}
+
+echo "Deleting App Registration $appRegistrationDisplayName..."
+
+if az ad app show --id $appRegistrationIdentifierUri
+then
+    # Delete the App Registration
+    az ad app delete --id $appRegistrationIdentifierUri
+fi
+
+echo "Uninstallation complete."

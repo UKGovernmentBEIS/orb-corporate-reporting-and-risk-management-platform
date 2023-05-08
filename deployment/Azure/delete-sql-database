@@ -1,0 +1,33 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: delete-sql-database
+#
+# This script deletes the Corporate Reporting SQL database for the given environment
+#
+# The script requires the following environment variables to be set:
+#
+#     env - The environment name
+######################################################################################################
+
+usage='Usage - ./delete-corporate-reporting <environment>'
+env=${1?$usage}
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+if az sql db show --name $sqlDatabaseName --server $sqlInstanceName --resource-group $resourceGroupName
+then
+    echo "Backing-up SQL database $sqlDatabaseName..."
+
+    backupDatabaseName="$sqlInstanceName-$(date +"%Y-%m-%d-%H-%M")"
+    az sql db copy --server $sqlInstanceName --name $sqlDatabaseName --resource-group $resourceGroupName --dest-name $backupDatabaseName --service-objective S0
+
+    echo "Deleting SQL database $sqlDatabaseName..."
+
+    az sql db delete --server $sqlInstanceName --name $sqlDatabaseName --resource-group $resourceGroupName --yes
+else
+    echo "SQL Azure Database does not exist - no action required"
+fi
+
+echo "Complete."

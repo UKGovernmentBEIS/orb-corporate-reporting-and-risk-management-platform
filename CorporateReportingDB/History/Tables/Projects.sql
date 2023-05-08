@@ -1,0 +1,27 @@
+﻿CREATE TABLE [History].[Projects]
+(
+	[ID] INT NOT NULL,
+	[Title] NVARCHAR(255) NOT NULL,
+	[SeniorResponsibleOwnerUserID] INT NULL,
+	[ProjectManagerUserID] INT NULL,
+	[Objectives] NVARCHAR(MAX) NULL,
+	[StartDate] DATETIME NULL,
+	[EndDate] DATETIME NULL,
+	[DirectorateID] INT NULL,
+	[EntityStatusID] INT NULL,
+	[EntityStatusDate] DATETIME2(7) NULL,
+	[SysStartTime] DATETIME2(0) NOT NULL,
+	[SysEndTime] DATETIME2(0) NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[ReportApproverUserID] INT NULL,
+	[ShowOnDirectorateReport] BIT NULL,
+	[ParentProjectID] INT NULL,
+	[ReportingLeadUserID] INT NULL,
+	[ReportingFrequency] TINYINT NULL,
+	[ReportingDueDay] TINYINT NULL,
+	[ReportingStartDate] DATETIME2(0) NULL,
+	[CorporateProjectID] NVARCHAR(MAX) NULL,
+	[Description] NVARCHAR(500) NULL,
+	[IntegrationID] NVARCHAR(255) NULL,
+	[IntegrationLastModified] DATETIME2(7) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]

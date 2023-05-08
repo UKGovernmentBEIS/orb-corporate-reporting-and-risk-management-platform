@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="41f5add1-4be1-4f8b-8d22-6010971e039d" ChangeDateTime="10/30/2019 16:21:01">
+    <Property Name="ElementName" Value="[dbo].[ThresholdAppetite].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ThresholdAppetite]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="94a0a2b9-7f1f-4511-a337-2988f4de74b1" ChangeDateTime="10/30/2019 16:21:12">
+    <Property Name="ElementName" Value="[dbo].[Threshold].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Threshold]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+</Operations>

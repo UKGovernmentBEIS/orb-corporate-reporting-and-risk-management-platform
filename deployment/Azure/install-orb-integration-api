@@ -1,0 +1,99 @@
+#!/bin/bash
+
+set -e
+
+######################################################################################################
+# Script: install-orb-integration-api
+#
+# This script provisions and configures the following resources in Azure to support a deployment 
+# of the ORB Integration API:
+#
+#     * Web App
+#
+# Parameters:
+#
+#     1) The environment name
+#     2) The GOV.UK Notify API key to use when sending emails
+#
+######################################################################################################
+
+usage='Usage - ./install-orb-integration-api <environment> <gov-notify-api-key> <app-reg-tenant-id>'
+env=${1?$usage}
+govUkNotifyApiKey=${2?$usage}
+appRegTenantId=${3?$usage}
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+# Set-up database connection strings
+webAppConnectionString="data source=$sqlInstanceName.database.windows.net;initial catalog=$sqlDatabaseName;MultipleActiveResultSets=True;App=EntityFramework;"
+
+echo "Creating App Registration for $orbIntegrationApiWebAppName..."
+
+appRegExists=$(az ad app list --display-name "$orbIntegrationApiWebAppName" --query "[] | length(@)")
+if [ $appRegExists -eq 1 ]
+then
+    echo "App Registration already exists - no action required"
+else
+    # Create an App Registration
+    az ad app create --display-name "$orbIntegrationApiWebAppName" --available-to-other-tenants false --oauth2-allow-implicit-flow false --reply-urls https://$orbIntegrationApiWebAppName.azurewebsites.net/.auth/login/aad/callback
+    appRegId=$(az ad app list --display-name "$orbIntegrationApiWebAppName" --query '[0].appId' --output tsv)
+    az ad app update --id $appRegId --set oauth2Permissions[0].isEnabled=false
+    az ad app update --id $appRegId --app-roles @orb-integration-api-appreg-approles.json --identifier-uris api://$appRegId --set oauth2Permissions='[]'
+    echo "Created App Registration for app"
+fi
+
+echo "Creating Web App $orbIntegrationApiWebAppName..."
+
+appExists=$(az webapp list --resource-group $resourceGroupName --query "[?name=='$orbIntegrationApiWebAppName'] | length(@)")
+if [ $appExists -eq 1 ]
+then
+    echo "Web app already exists - no action required"
+else
+    # Create a Web App to host the API
+    az webapp create --name $orbIntegrationApiWebAppName --resource-group $resourceGroupName --plan $appServicePlanName --assign-identity [system]
+    echo "Created Web App $orbIntegrationApiWebAppName"
+fi
+
+echo "Configuring Web App $orbIntegrationApiWebAppName..."
+
+if az webapp show --name $orbIntegrationApiWebAppName --resource-group $resourceGroupName
+then
+    # Configure Web App settings
+    az webapp config appsettings set --name $orbIntegrationApiWebAppName --resource-group $resourceGroupName --settings @$orbIntegrationApiSettingsFilename
+    az webapp config appsettings set --name $orbIntegrationApiWebAppName --resource-group $resourceGroupName --settings "ConnectionStrings__ORB=$webAppConnectionString"
+    az webapp config appsettings set --name $orbIntegrationApiWebAppName --resource-group $resourceGroupName --settings "EmailSettings__GovUkNotifyApiKey=$govUkNotifyApiKey"
+    echo "Configured Web App settings"
+
+    # Configure logging to Storage Container
+    apiResourceId=$(az resource list --name $orbIntegrationApiWebAppName --query [0].id --output tsv)
+    start=`date -d "-1 hour" '+%Y-%m-%dT%H:%M:%SZ'`
+    end=`date -d "10 years" '+%Y-%m-%dT%H:%M:%SZ'`
+    sasToken=$(az storage container generate-sas --account-name $storageAccountName --name $containerName --permissions dlrw --start $start --expiry $end --output tsv)
+    sasUrl="https://$storageAccountName.blob.core.windows.net/$containerName?$sasToken"
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.level=Error
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.sasUrl=$sasUrl
+    az resource update --ids "$apiResourceId/config/logs" --set properties.applicationLogs.azureBlobStorage.retentionInDays=7
+fi
+
+echo "Configuring Web App access to database..."
+
+if az ad group show --group "$apiSecurityGroupName"
+then
+    webAppIdentity=$(az functionapp show --name "$orbIntegrationApiWebAppName" --resource-group "$resourceGroupName" --query "identity.principalId" --output tsv)
+    isMember=$(az ad group member check --group "$apiSecurityGroupName" --member-id $webAppIdentity --query 'value')
+    if [ "$isMember" = "true" ]
+    then
+        echo "Web App is already a member of the database access security group - no action required"
+    else
+        az ad group member add --group "$apiSecurityGroupName" --member-id $webAppIdentity
+        echo "Added Web App identity to database access security group"
+    fi
+else
+    echo "Security Group '$apiSecurityGroupName' does not exist and must be created"
+fi
+
+echo "Installation complete - the Web App is now available at the following url:"
+
+# Copy the result of the following command into a browser to see the web app.
+echo https://$webAppName.azurewebsites.net

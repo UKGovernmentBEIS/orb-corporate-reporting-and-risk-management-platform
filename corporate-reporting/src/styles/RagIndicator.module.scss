@@ -1,0 +1,20 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+@import '../styles/cr.module';
+
+.ragIndicator {
+    .indicator {
+        text-align: center;
+        font-weight: bold;
+        padding: 3px 9px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .red { background-color: Red; color: White; }
+    .amberRed { background: repeating-linear-gradient(45deg, #FF0000, #FF0000 2px, #FFBF00 2px, #FFBF00 4px); color: White; }
+    .amber { background-color: #FFBF00; color: White; }
+    .amberGreen { background: repeating-linear-gradient(135deg, #FFBF00, #FFBF00 2px, #007F00 2px, #007F00 4px); color: White; }
+    .green { background-color: #007F00; color: White; }
+    .grey { background-color: $ms-color-neutralTertiary; color:White; }
+    .blue { background-color: $ms-color-blue; color:White; }
+}

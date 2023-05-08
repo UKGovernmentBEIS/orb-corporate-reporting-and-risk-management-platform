@@ -1,0 +1,35 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+
+.orb {
+  display: flex;
+  height: 100%;
+
+  .orbCollapseMenuButton {
+    display: block;
+  }
+  .orbMenu {
+    display: none;
+  }
+  .orbContent {
+    width: calc(100% - 32px);
+  }
+  @media screen and (min-width: 990px) {
+    .orbCollapseMenuButton {
+      display: none;
+    }
+    .orbMenu {
+      display: block;
+      height: 100%;
+      width: 227px;
+      border-right: 1px solid #edebe9;
+      overflow-y: auto;
+
+      :global .is-selected .ms-Nav-linkText {
+        font-weight: 600;
+      }
+    }
+    .orbContent {
+      width: calc(100% - 227px);
+    }
+  }
+}

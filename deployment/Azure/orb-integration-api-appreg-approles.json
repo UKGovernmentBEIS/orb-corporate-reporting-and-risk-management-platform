@@ -1,0 +1,11 @@
+[
+    {
+        "allowedMemberTypes": [
+          "Application"
+        ],
+        "description": "Apps that have this role have the ability to invoke the API",
+        "displayName": "Can invoke API",
+        "isEnabled": true,
+        "value": "access_as_application"
+    }
+]

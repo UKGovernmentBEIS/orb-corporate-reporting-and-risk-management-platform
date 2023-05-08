@@ -1,0 +1,36 @@
+pool:
+  name: Hosted VS2017
+  demands: node.js
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 8.9.4'
+  inputs:
+    versionSpec: '>=8.9.4 <9.0.0'
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: 'corporate-reporting'
+    verbose: false
+
+- task: Gulp@0
+  displayName: 'Run gulp bundle'
+  inputs:
+    gulpFile: 'corporate-reporting/gulpfile.js'
+    targets: bundle
+    arguments: '--ship'
+    workingDirectory: 'corporate-reporting'
+
+- task: Gulp@0
+  displayName: 'Run gulp package-solution'
+  inputs:
+    gulpFile: 'corporate-reporting/gulpfile.js'
+    targets: 'package-solution'
+    arguments: '--ship'
+    workingDirectory: 'corporate-reporting'
+
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    targetPath: 'corporate-reporting/sharepoint/solution/corporate-reporting.sppkg'

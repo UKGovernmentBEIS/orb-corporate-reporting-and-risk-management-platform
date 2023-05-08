@@ -1,0 +1,17 @@
+#Your build pipeline references a secret variable named ‘sql-user’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it secret. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references a secret variable named ‘sql-password’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it secret. See https://go.microsoft.com/fwlink/?linkid=865972
+variables:
+  sql-server: 'beisdigitalprod.database.windows.net'
+  sql-database: 'corporate-reporting-prod'
+
+steps:
+- task: SqlAzureDacpacDeployment@1
+  displayName: 'Azure SQL DacpacTask'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (3e78a638-67d3-4bf6-9aed-6e4960e5e620)'
+    ServerName: '$(sql-server)'
+    DatabaseName: '$(sql-database)'
+    SqlUsername: '$(sql-user)'
+    SqlPassword: '$(sql-password)'
+    DacpacFile: '$(System.DefaultWorkingDirectory)/_CorporateReportingDB - CI/drop/CorporateReportingDB/bin/Debug/CorporateReportingDB.dacpac'
+    PublishProfile: '$(System.DefaultWorkingDirectory)/_CorporateReportingDB - CI/drop/CorporateReportingDB/CorporateReportingDB.publish.xml'

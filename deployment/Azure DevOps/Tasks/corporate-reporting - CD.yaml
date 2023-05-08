@@ -1,0 +1,13 @@
+#Your build pipeline references a secret variable named ‘sp_password’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it secret. See https://go.microsoft.com/fwlink/?linkid=865972
+variables:
+  sp_site_url: 'https://beisdigitalsvc.sharepoint.com/sites/CorporateReportingDemo'
+  sp_user: 'admin@beisdigitalsvc.onmicrosoft.com'
+
+steps:
+- task: s-kainet.pnp-powershell.pnp-powershell.PnPPowerShell@1
+  displayName: 'Upload and deploy app to SharePoint'
+  inputs:
+    spSiteUrl: '$(sp_site_url)'
+    spUser: '$(sp_user)'
+    spPassword: '$(sp_password)'
+    script: 'Add-PnPApp -Path Drop/drop/corporate-reporting.sppkg -Scope Site -Publish -Overwrite'

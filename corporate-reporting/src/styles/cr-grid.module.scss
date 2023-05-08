@@ -1,0 +1,117 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+
+.grid {
+  @include ms-Grid;
+
+  .gridRow {
+    @include ms-Grid-row;
+
+    .gridCol {
+      @include ms-Grid-col;
+    }
+
+    .sm1 {
+      @include ms-sm1;
+    }
+    .sm2 {
+      @include ms-sm2;
+    }
+    .sm3 {
+      @include ms-sm3;
+    }
+    .sm4 {
+      @include ms-sm4;
+    }
+    .sm5 {
+      @include ms-sm5;
+    }
+    .sm6 {
+      @include ms-sm6;
+    }
+    .sm7 {
+      @include ms-sm7;
+    }
+    .sm8 {
+      @include ms-sm8;
+    }
+    .sm9 {
+      @include ms-sm9;
+    }
+    .sm10 {
+      @include ms-sm10;
+    }
+    .sm11 {
+      @include ms-sm11;
+    }
+    .sm12 {
+      @include ms-sm12;
+    }
+    .md1 {
+      @include ms-md1;
+    }
+    .md2 {
+      @include ms-md2;
+    }
+    .md3 {
+      @include ms-md3;
+    }
+    .md4 {
+      @include ms-md4;
+    }
+    .md6 {
+      @include ms-md6;
+    }
+    .md8 {
+      @include ms-md8;
+    }
+    .md10 {
+      @include ms-md10;
+    }
+    .md12 {
+      @include ms-md12;
+    }
+    .lg2 {
+      @include ms-lg2;
+    }
+    .lg3 {
+      @include ms-lg3;
+    }
+    .lg4 {
+      @include ms-lg4;
+    }
+    .lg6 {
+      @include ms-lg6;
+    }
+    .lg7 {
+      @include ms-lg7;
+    }
+    .lg8 {
+      @include ms-lg8;
+    }
+    .lg12 {
+      @include ms-lg12;
+    }
+    .xl2 {
+      @include ms-xl2;
+    }
+    .xl3 {
+      @include ms-xl3;
+    }
+    .xl4 {
+      @include ms-xl4;
+    }
+    .xl6 {
+      @include ms-xl6;
+    }
+    @media (max-width: $ms-screen-max-sm) {
+      .hiddenMdDown {
+        display: none !important;
+      }
+    }
+    @media screen and (min-width: $ms-screen-min-md) and (max-width: $ms-screen-max-md) {
+      .hiddenMdDown {
+        display: none !important;
+      }
+    }
+  }
+}

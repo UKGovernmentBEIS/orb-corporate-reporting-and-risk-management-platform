@@ -1,0 +1,7 @@
+{
+  "GovUkNotifyApproverTemplateId": "7923d0ce-fcbb-4377-a878-411b14f15cf4",
+  "GovUkNotifyPartnerOrgsApproverTemplateId": "b050708c-0c34-4717-b11b-ecab87c33b1b",
+  "GovUkNotifyEmailReplyToId": "5669dd0c-54a2-427c-bb83-0102b7c9737b",
+  "GovUkNotifyTemplateId": "849150fa-add2-43ae-bfb1-07667968b1c3",
+  "DatabaseAccessTokenUrl": "https://database.windows.net/"
+}

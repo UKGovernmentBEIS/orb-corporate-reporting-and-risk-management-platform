@@ -1,0 +1,5 @@
+# Default line-endings for all files
+* text=auto
+
+# Configure line-endings for files that will be used from Linux
+/deployment/Azure/install-corporate-reporting text

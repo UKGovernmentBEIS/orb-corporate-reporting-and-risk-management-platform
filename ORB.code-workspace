@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "CorporateReportingDB"
+		},
+		{
+			"path": "ORB.API"
+		},
+		{
+			"path": "ORB.Core"
+		},
+		{
+			"path": "ORB.Data"
+		},
+		{
+			"path": "ORB.Data.Tests"
+		},
+		{
+			"path": "ORB.Functions"
+		},
+		{
+			"path": "ORB.IntegrationAPI"
+		},
+		{
+			"path": "ORB.IntegrationAPI.Tests"
+		},
+		{
+			"path": "ORB.Services"
+		},
+		{
+			"path": "ORB.Services.Tests"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}

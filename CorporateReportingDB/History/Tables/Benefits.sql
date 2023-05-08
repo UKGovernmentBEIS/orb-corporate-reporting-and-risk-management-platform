@@ -1,0 +1,25 @@
+﻿CREATE TABLE [History].[Benefits]
+(
+	[ID] INT NOT NULL,
+	[Title] NVARCHAR(255) NOT NULL,
+	[ProjectID] INT NOT NULL,
+	[BenefitTypeID] INT NULL,
+	[MeasurementUnitID] INT NULL,
+	[TargetPerformanceLowerLimit] DECIMAL(18, 4) NULL,
+	[TargetPerformanceUpperLimit] DECIMAL(18, 4) NULL,
+	[LeadUserID] INT NULL,
+	[RagOptionID] INT NULL,
+	[EntityStatusID] INT NULL,
+	[EntityStatusDate] DATETIME2(7) NULL,
+	[SysStartTime] DATETIME2(0) NOT NULL,
+	[SysEndTime] DATETIME2(0) NOT NULL,
+	[ModifiedByUserID] INT NULL,
+	[ReportingFrequency] TINYINT NULL,
+	[ReportingDueDay] TINYINT NULL,
+	[ReportingStartDate] DATETIME2(0) NULL,
+	[ReportingStartMonth] TINYINT NULL,
+	[Description] NVARCHAR(500) NULL,
+	[BaselineDate] DATETIME2(0) NULL,
+	[ForecastDate] DATETIME2(0) NULL,
+	[ActualDate] DATETIME2(0) NULL
+) ON [PRIMARY]

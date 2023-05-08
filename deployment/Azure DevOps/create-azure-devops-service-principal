@@ -1,0 +1,70 @@
+#!/bin/bash
+
+######################################################################################################
+# Script: create-azure-devops-service-principal
+#
+# This script provisions a Service Principal in Azure AD for use with Azure DevOps pipelines 
+# to provision resources and deploy code to the Azure environment
+#
+# Parameters:
+#
+#     1) Guid (used to make the App Id Uri for the App Registration unique)
+#     2) Password
+#
+######################################################################################################
+
+guid=${1?Usage - create-azure-devops-service-principal <guid> <password>}
+password=${2?Usage - create-azure-devops-service-principal <guid> <password>}
+
+appRegistrationDisplayName='BEIS Corporate Reporting Azure DevOps'
+appRegistrationRootUrl='https://VisualStudio/SPN'
+appRegistrationIdentifierUri="${appRegistrationRootUrl}${guid}"
+
+echo "Creating App Registration $appRegistrationDisplayName..."
+
+if az ad app show --id $appRegistrationIdentifierUri
+then
+    echo "App Registration already exists - no action required"
+else
+    # Create an App Registration
+    az ad app create --display-name "$appRegistrationDisplayName" --available-to-other-tenants false --homepage $appRegistrationRootUrl --oauth2-allow-implicit-flow false --reply-urls $appRegistrationRootUrl --identifier-uris $appRegistrationIdentifierUri --password $password
+fi
+
+echo "Creating Service Principal $appRegistrationDisplayName..."
+
+appId=$(az ad app list --display-name "$appRegistrationDisplayName" --query [].appId --output tsv)
+
+if az ad sp show --id $appRegistrationIdentifierUri
+then
+    echo "Service Principal already exists - no action required"
+else
+    # Create a Service Principal
+    az ad sp create --id $appId
+fi
+
+echo "Creating Role Assignment for Service Principal $appRegistrationDisplayName..."
+
+if az role assignment list --role 'Contributor' --assignee $appId
+then
+    echo "Role Assignment already exists - no action required"
+else
+    subscriptionId=$(az account list --query [].id --output tsv)
+    az role assignment create --role 'Contributor' --assignee $appId
+fi
+
+# The Service Principal needs to be added to the User Administrator AD Admin Group 
+# This does not appear to be possible using the CLI at present
+
+echo "Creation of Service Principal complete."
+
+echo "Use the following information to create the Service Connection in Azure DevOps:"
+
+subscriptionId=$(az account list --query [].id --output tsv)
+subscriptionName=$(az account list --query [].name --output tsv)
+tenantId=$(az account list --query [].tenantId --output tsv)
+
+echo "Subscription ID: $subscriptionId"
+echo "Subscription Name: $subscriptionName"
+echo "Service Principal ID: $appId"
+echo "Service Principal Client Key: $password"
+echo "Tenant ID: $tenantId"

@@ -1,0 +1,8 @@
+{
+  "DomainFixFind": "@cirrus.beis.gov.uk",
+  "DomainFixReplace": "@beis.gov.uk",
+  "GovUkNotifyDeescalationTemplateId": "efacb0c4-6357-4b38-93f5-cdff2c6d5bdc",
+  "GovUkNotifyEscalationTemplateId": "a6ec80e8-5fc4-43ce-8e89-f37633e0bfda",
+  "GovUkNotifyRiskEmailReplyToId": "5669dd0c-54a2-427c-bb83-0102b7c9737b",
+  "ProjectRiskPrefix": "PRO-"
+}

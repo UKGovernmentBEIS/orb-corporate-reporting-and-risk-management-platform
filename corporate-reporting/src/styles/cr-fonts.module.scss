@@ -1,0 +1,52 @@
+@import "~office-ui-fabric-react/dist/sass/_References.scss";
+
+.fontSize14 {
+  @include ms-fontSize-14;
+}
+@mixin fontSize14 {
+  @include ms-fontSize-14;
+}
+.fontSize16 {
+  @include ms-fontSize-16;
+}
+@mixin fontSize16 {
+  @include ms-fontSize-16;
+}
+.fontSize18 {
+  @include ms-fontSize-18;
+}
+@mixin fontSize18 {
+  @include ms-fontSize-18;
+}
+.fontSize20 {
+  @include ms-fontSize-20;
+}
+@mixin fontSize20 {
+  @include ms-fontSize-20;
+}
+.fontSize28 {
+  @include ms-fontSize-28;
+}
+@mixin fontSize28 {
+  @include ms-fontSize-28;
+}
+.fontSize42 {
+  @include ms-fontSize-42;
+}
+
+.fontWeightRegular {
+  @include ms-fontWeight-regular;
+}
+.fontWeightSemibold {
+  @include ms-fontWeight-semibold;
+}
+.fontWeightBold {
+  @include ms-fontWeight-bold;
+}
+
+.fontColorNeutralSecondary {
+  @include ms-fontColor-neutralSecondary;
+}
+.fontColorNeutralTertiary {
+  @include ms-fontColor-neutralTertiary;
+}

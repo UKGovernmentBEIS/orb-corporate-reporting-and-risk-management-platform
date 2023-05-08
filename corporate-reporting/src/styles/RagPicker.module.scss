@@ -1,0 +1,14 @@
+@import 'cr.module.scss';
+
+.ragPicker {
+    .history {
+        opacity: 0.7;
+        p { margin: 0.3em 0em; }
+    }        
+    .historyTitle { margin: 0.3em 0em; font-size: 13px; font-weight: 600; }
+    button {
+        margin-top: 0em !important;
+        margin-bottom: 0em !important;
+    }
+    .invalid :global table { @include cr-border-invalid; }
+}

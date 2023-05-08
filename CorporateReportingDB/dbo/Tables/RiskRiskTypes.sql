@@ -1,0 +1,23 @@
+﻿CREATE TABLE [dbo].[RiskRiskTypes]
+(
+	[ID] INT IDENTITY(1,1) NOT NULL,
+	[Title] NVARCHAR(50) NULL,
+	[RiskID] INT NOT NULL,
+	[RiskTypeID] INT NOT NULL,
+	CONSTRAINT [PK_RiskRiskTypes] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[RiskRiskTypes]  ADD  CONSTRAINT [FK_RiskRiskTypes_Risks] FOREIGN KEY([RiskID])
+REFERENCES [dbo].[Risks] ([ID])
+GO
+
+ALTER TABLE [dbo].[RiskRiskTypes] CHECK CONSTRAINT [FK_RiskRiskTypes_Risks]
+GO
+ALTER TABLE [dbo].[RiskRiskTypes]  ADD  CONSTRAINT [FK_RiskRiskTypes_RiskTypes] FOREIGN KEY([RiskTypeID])
+REFERENCES [dbo].[RiskTypes] ([ID])
+GO
+
+ALTER TABLE [dbo].[RiskRiskTypes] CHECK CONSTRAINT [FK_RiskRiskTypes_RiskTypes]

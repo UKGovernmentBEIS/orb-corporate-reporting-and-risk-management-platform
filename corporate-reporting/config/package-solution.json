@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Corporate Reporting Web Parts",
+    "id": "0f2ef199-a68e-4115-817a-558b62b85dff",
+    "version": "6.2.2.0",
+    "includeClientSideAssets": true,
+    "webApiPermissionRequests": [],
+    "developer": {
+      "name": "Swiftpro Corporation Ltd",
+      "websiteUrl": "tas@swiftpro.com",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/corporate-reporting.sppkg"
+  }
+}

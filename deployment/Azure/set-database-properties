@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+######################################################################################################
+# Script: set-database-properties
+#
+# This script updates database settings in Azure to configure 
+# the Corporate Reporting application:
+#
+#     * Azure SQL DB
+#
+# Parameters:
+#
+#     1) The environment name
+#     2) The SQL database maximum size
+#
+######################################################################################################
+
+usage='Usage - ./set-database-properties <environment> <sql-db-max-size>'
+env=${1?$usage}
+dbMaxSize=${2?usage}
+
+# Set-up common resource names (execute in current shell)
+. set-resource-names $env
+
+echo "Updating SQL Azure Database $sqlDatabaseName..."
+
+if az sql db show --name $sqlDatabaseName --server $sqlInstanceName --resource-group $resourceGroupName
+then
+    echo "SQL Azure Database found - applying settings"
+    # Change SQL Azure Database settings
+    az sql db update --name $sqlDatabaseName --resource-group $resourceGroupName --server $sqlInstanceName --max-size $dbMaxSize
+else
+    echo "SQL Azure Database not found"
+fi
+
+echo "Update complete"
