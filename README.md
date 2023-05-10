@@ -14,8 +14,6 @@ This solution contains the following projects:
 * ORB.Core - Data models, interfaces etc for the ORB solution
 * ORB.Data - Data access layer with repositories that apply user permissions
 * ORB.Functions - Azure Functions that send reminder emails on a schedule
-* ORB.IntegrationAPI - A set of .NET Core Azure Functions allowing partner organisations to submit reports to ORB
-* ORB.IntegrationAPI.Tests - Unit tests for the Integration API
 * ORB.Services - Service layer containing business logic for the application
 * ORB.Services.Tests - Unit tests for the service layer
 
@@ -29,6 +27,3 @@ The deployment folder contains scripts to provision Azure resources for the envi
 ```ps
 .\deployment\SharePoint\Install-AppCatalog.ps1 -Path:.\secrets\development.json -Verbose
 ```
-
-##releases
-6.1.3 : This fixed a bug where Partner Orgs needed to opens some modules before they could provide an update.
