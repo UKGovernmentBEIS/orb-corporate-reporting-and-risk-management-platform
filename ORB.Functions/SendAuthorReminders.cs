@@ -87,7 +87,7 @@ namespace ORB.Functions
                 projectsDue.AddRange(_projectService.EntitiesWithReportingCycle(weeklyCycleDue).ToList());
             }
 
-            // Fortnightly
+
             if (fortnightlyCycleDue != null)
             {
 
@@ -98,7 +98,6 @@ namespace ORB.Functions
                 projectsDue.AddRange(_projectService.EntitiesWithReportingCycle(fortnightlyCycleDue).ToList());
             }
 
-            // Monthly and monthly weekday
             if (monthlyCycleDue != null || monthlyWeekdayCycleDue != null || monthlyWeekday2CycleDue != null)
             {
                 if (monthlyCycleDue != null)
@@ -129,7 +128,6 @@ namespace ORB.Functions
                 }
             }
 
-            // Quarterly
             if (quarterlyCycleDue != null)
             {
                 benefitsDue.AddRange(_benefitService.EntitiesWithReportingCycle(quarterlyCycleDue).ToList());
@@ -139,7 +137,6 @@ namespace ORB.Functions
                 projectsDue.AddRange(_projectService.EntitiesWithReportingCycle(quarterlyCycleDue).ToList());
             }
 
-            // Biannually
             if (biannuallyCycleDue != null)
             {
                 benefitsDue.AddRange(_benefitService.EntitiesWithReportingCycle(biannuallyCycleDue).ToList());
@@ -149,7 +146,6 @@ namespace ORB.Functions
                 projectsDue.AddRange(_projectService.EntitiesWithReportingCycle(biannuallyCycleDue).ToList());
             }
 
-            // Annually
             if (annuallyCycleDue != null)
             {
                 benefitsDue.AddRange(_benefitService.EntitiesWithReportingCycle(annuallyCycleDue).ToList());
