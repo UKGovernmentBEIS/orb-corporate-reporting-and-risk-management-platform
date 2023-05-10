@@ -76,8 +76,7 @@ namespace ORB.Functions
                 AddPartnerOrgRecipients(wpor, weeklyCycleDue);
                 Notifications.SendEmails(log, _emailService, _emailSettings, wpor.Distinct(), _emailSettings.PartnerOrgApproverReminderTemplateId, templateVars);
             }
-
-            // Fortnightly
+            
             if (fortnightlyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "fortnight" } };
@@ -91,7 +90,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, fpor.Distinct(), _emailSettings.PartnerOrgApproverReminderTemplateId, templateVars);
             }
 
-            // Monthly and monthly weekday
             if (monthlyCycleDue != null || monthlyWeekdayCycleDue != null || monthlyWeekday2CycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "month" } };
@@ -133,7 +131,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, mpor.Distinct(), _emailSettings.PartnerOrgApproverReminderTemplateId, templateVars);
             }
 
-            // Quarterly
             if (quarterlyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "quarter" } };
@@ -147,7 +144,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, qpor.Distinct(), _emailSettings.PartnerOrgApproverReminderTemplateId, templateVars);
             }
 
-            // Biannually
             if (biannuallyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "half-year" } };
@@ -161,7 +157,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, bpor.Distinct(), _emailSettings.PartnerOrgApproverReminderTemplateId, templateVars);
             }
 
-            // Annually
             if (annuallyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "year" } };

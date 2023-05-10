@@ -66,7 +66,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, wr.Distinct(), _emailSettings.FinancialRiskAuthorReminderTemplateId, templateVars);
             }
 
-            // Fortnightly
             if (fortnightlyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "fortnight" } };
@@ -75,7 +74,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, fr.Distinct(), _emailSettings.FinancialRiskAuthorReminderTemplateId, templateVars);
             }
 
-            // Monthly and monthly weekday
             if (monthlyCycleDue != null || monthlyWeekdayCycleDue != null || monthlyWeekday2CycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "month" } };
@@ -98,7 +96,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, mr.Distinct(), _emailSettings.FinancialRiskAuthorReminderTemplateId, templateVars);
             }
 
-            // Quarterly
             if (quarterlyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "quarter" } };
@@ -107,7 +104,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, qr.Distinct(), _emailSettings.FinancialRiskAuthorReminderTemplateId, templateVars);
             }
 
-            // Biannually
             if (biannuallyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "half-year" } };
@@ -116,7 +112,6 @@ namespace ORB.Functions
                 Notifications.SendEmails(log, _emailService, _emailSettings, br.Distinct(), _emailSettings.FinancialRiskAuthorReminderTemplateId, templateVars);
             }
 
-            // Annually
             if (annuallyCycleDue != null)
             {
                 var templateVars = new Dictionary<string, dynamic>() { { "frequency", "year" } };
