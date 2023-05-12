@@ -1,6 +1,6 @@
 # ORB - Online Corporate Reporting and Risk Management
  
-A service for the former Department for Business, Energy and Industrial Strategy (BEIS) to manage their internal performance and risk reporting process. This has now been moved to the Dept of Net Zero and Energy Security.
+A service for the former Department for Business, Energy and Industrial Strategy (BEIS) to manage their internal performance and risk reporting process. This has now been moved to the Dept of Energy Security and Net Zero.
 Staff use the service to report their directorate's status, progress on projects and deliverables, and risk management.
 
 ## Components
