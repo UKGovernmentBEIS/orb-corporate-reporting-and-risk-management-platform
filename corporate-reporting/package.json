@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@microsoft/sp-core-library": "1.12.1",
-    "@microsoft/sp-lodash-subset": "1.12.1",
+    "@microsoft/sp-lodash-subset": "1.18.2",
     "@microsoft/sp-property-pane": "1.12.1",
     "@microsoft/sp-webpart-base": "1.12.1",
     "date-fns": "^2.21.3",
