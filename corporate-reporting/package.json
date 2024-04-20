@@ -9,7 +9,7 @@
     "test": "jest --config ./config/jest.config.json"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "1.12.1",
+    "@microsoft/sp-core-library": "1.18.2",
     "@microsoft/sp-lodash-subset": "1.12.1",
     "@microsoft/sp-property-pane": "1.12.1",
     "@microsoft/sp-webpart-base": "1.12.1",
