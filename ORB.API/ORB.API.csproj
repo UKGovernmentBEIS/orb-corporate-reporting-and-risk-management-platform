@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation" Version="10.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.14" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="5.0.8" />
     <PackageReference Include="Microsoft.Identity.Web" Version="1.10.0" />
     <PackageReference Include="Microsoft.OData.Core" Version="7.10.0" />
